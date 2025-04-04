@@ -1,0 +1,24 @@
+[project]
+name = "lead_scoring"
+version = "0.1.0"
+description = "crewai-plus-lead-scoring using crewAI"
+authors = [
+    { name = "Your Name", email = "you@example.com" },
+]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.76.2",
+]
+
+[project.scripts]
+lead_scoring = "lead_scoring.main:run"
+run_crew = "lead_scoring.main:run"
+train = "lead_scoring.main:train"
+replay = "lead_scoring.main:replay"
+test = "lead_scoring.main:test"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"

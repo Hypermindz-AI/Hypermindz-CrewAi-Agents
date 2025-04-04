@@ -1,0 +1,21 @@
+[project]
+name = "job_posting"
+version = "0.1.0"
+description = "job-posting using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai-tools==0.13.2",
+    "crewai[tools]==0.76.2",
+]
+
+[project.scripts]
+job_posting = "job_posting.main:run"
+run_crew = "job_posting.main:run"
+train = "job_posting.main:train"
+replay = "job_posting.main:replay"
+test = "job_posting.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,24 @@
+[project]
+name = "content_marketing_ideas"
+version = "0.1.0"
+description = "crewai-enterprise-content-marketing using crewAI"
+authors = [
+    { name = "Your Name", email = "you@example.com" },
+]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.76.2",
+]
+
+[project.scripts]
+content_marketing_ideas = "content_marketing_ideas.main:run"
+run_crew = "content_marketing_ideas.main:run"
+train = "content_marketing_ideas.main:train"
+replay = "content_marketing_ideas.main:replay"
+test = "content_marketing_ideas.main:test"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
