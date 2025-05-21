@@ -1,0 +1,6075 @@
+{
+  "datasets": [
+    {
+      "id": "5c06485b-4380-4c00-81e9-28a56dddbd80",
+      "name": "Creative_Performance_Data_1712",
+      "description": "Creative Performance Data dataset from Nielsen containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CTV Data Feed",
+      "size": "662 TB",
+      "provider": "Nielsen",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_130",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "lxcikr2e",
+          "username": "adtech_user_956",
+          "password": "rbjbsogfic",
+          "warehouse": "ADTECH_WH_3",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-05-04T22:30:20.747Z",
+      "nextUpdate": "2025-06-02T22:30:20.747Z",
+      "status": "processing",
+      "qualityScore": 96,
+      "metadata": {
+        "recordCount": 6364675,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Nielsen",
+        "dataSource": "Nielsen CTV Data Feed Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "3 years",
+        "tags": [
+          "ctv-data-feed",
+          "nielsen",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "performance_id",
+            "type": "string",
+            "description": "Unique identifier for the performance record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "creative_id",
+            "type": "string",
+            "description": "Identifier for the creative",
+            "isNullable": false
+          },
+          {
+            "name": "creative_name",
+            "type": "string",
+            "description": "Name of the creative",
+            "isNullable": false
+          },
+          {
+            "name": "creative_type",
+            "type": "string",
+            "description": "Type of creative (image, video, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "campaign_id",
+            "type": "string",
+            "description": "Identifier for the campaign",
+            "isNullable": false
+          },
+          {
+            "name": "date",
+            "type": "date",
+            "description": "Date of the performance data",
+            "isNullable": false
+          },
+          {
+            "name": "impressions",
+            "type": "integer",
+            "description": "Number of impressions",
+            "isNullable": false
+          },
+          {
+            "name": "clicks",
+            "type": "integer",
+            "description": "Number of clicks",
+            "isNullable": false
+          },
+          {
+            "name": "conversions",
+            "type": "integer",
+            "description": "Number of conversions",
+            "isNullable": false
+          },
+          {
+            "name": "ctr",
+            "type": "decimal",
+            "description": "Click-through rate",
+            "isNullable": false
+          },
+          {
+            "name": "engagement_rate",
+            "type": "decimal",
+            "description": "Engagement rate",
+            "isNullable": true
+          },
+          {
+            "name": "video_completion_rate",
+            "type": "decimal",
+            "description": "Video completion rate (for video creatives)",
+            "isNullable": true
+          },
+          {
+            "name": "average_view_time",
+            "type": "decimal",
+            "description": "Average view time in seconds (for video creatives)",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.4",
+        "lastUpdated": "2025-05-13",
+        "provider": "Nielsen"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 46577.42,
+        "currency": "USD",
+        "validityPeriod": 65
+      }
+    },
+    {
+      "id": "a27a352a-2143-4193-a024-eb10c74d6821",
+      "name": "Contextual_Targeting_Data_7731",
+      "description": "Contextual Targeting Data dataset from Nielsen containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "940 GB",
+      "provider": "Nielsen",
+      "location": "/data/adtech/user_data_941.csv",
+      "locationType": "local",
+      "credentials": {
+        "type": "local",
+        "details": {
+          "location": "/data/adtech/dataset-278.csv"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-21T22:30:20.747Z",
+      "nextUpdate": "2025-05-21T22:30:20.747Z",
+      "status": "active",
+      "qualityScore": 93,
+      "metadata": {
+        "recordCount": 3684891,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Nielsen",
+        "dataSource": "Nielsen POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "3 years",
+        "tags": [
+          "poi-data",
+          "nielsen",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Unique identifier for the content",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "domain",
+            "type": "string",
+            "description": "Domain of the content",
+            "isNullable": false
+          },
+          {
+            "name": "content_category",
+            "type": "string",
+            "description": "Primary category of the content",
+            "isNullable": false
+          },
+          {
+            "name": "content_subcategory",
+            "type": "string",
+            "description": "Subcategory of the content",
+            "isNullable": true
+          },
+          {
+            "name": "keywords",
+            "type": "array",
+            "description": "Keywords extracted from the content",
+            "isNullable": true
+          },
+          {
+            "name": "sentiment_score",
+            "type": "decimal",
+            "description": "Sentiment analysis score (-1 to 1)",
+            "isNullable": true
+          },
+          {
+            "name": "language",
+            "type": "string",
+            "description": "Language of the content",
+            "isNullable": false
+          },
+          {
+            "name": "content_length",
+            "type": "integer",
+            "description": "Length of the content in characters",
+            "isNullable": true
+          },
+          {
+            "name": "last_crawled",
+            "type": "timestamp",
+            "description": "When the content was last analyzed",
+            "isNullable": false
+          },
+          {
+            "name": "brand_safety_score",
+            "type": "integer",
+            "description": "Brand safety score (0-100)",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.3",
+        "lastUpdated": "2025-05-13",
+        "provider": "Lotame"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 8449.67,
+        "currency": "USD",
+        "billingFrequency": "hourly"
+      }
+    },
+    {
+      "id": "437770fb-e4a4-4cdc-ac2c-ca8672ae4ef8",
+      "name": "Frequency_Optimization_Data_8133",
+      "description": "Frequency Optimization Data dataset from Neustar containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CTV Data Feed",
+      "size": "324 MB",
+      "provider": "Neustar",
+      "location": "adtech_schema.user_data_671",
+      "locationType": "redshift",
+      "credentials": {
+        "type": "redshift",
+        "details": {
+          "host": "adtech-cluster-620.amazonaws.com",
+          "port": "5439",
+          "database": "adtech_db",
+          "username": "adtech_user_872",
+          "password": "rupytf6ba1",
+          "schema": "adtech_schema"
+        }
+      },
+      "updateFrequency": "realtime",
+      "lastUpdated": "2025-05-09T22:30:20.747Z",
+      "nextUpdate": null,
+      "status": "active",
+      "qualityScore": 51,
+      "metadata": {
+        "recordCount": 6097184,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Neustar",
+        "dataSource": "Neustar CTV Data Feed Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "1 years",
+        "tags": [
+          "ctv-data-feed",
+          "neustar",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "optimization_id",
+            "type": "string",
+            "description": "Unique identifier for the frequency optimization record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "campaign_id",
+            "type": "string",
+            "description": "Identifier for the campaign",
+            "isNullable": false
+          },
+          {
+            "name": "audience_id",
+            "type": "string",
+            "description": "Identifier for the audience",
+            "isNullable": false
+          },
+          {
+            "name": "date",
+            "type": "date",
+            "description": "Date of the optimization data",
+            "isNullable": false
+          },
+          {
+            "name": "frequency_bucket",
+            "type": "integer",
+            "description": "Frequency bucket (1, 2-3, 4-6, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "user_count",
+            "type": "integer",
+            "description": "Number of users in this frequency bucket",
+            "isNullable": false
+          },
+          {
+            "name": "impression_count",
+            "type": "integer",
+            "description": "Number of impressions in this frequency bucket",
+            "isNullable": false
+          },
+          {
+            "name": "click_count",
+            "type": "integer",
+            "description": "Number of clicks in this frequency bucket",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_count",
+            "type": "integer",
+            "description": "Number of conversions in this frequency bucket",
+            "isNullable": false
+          },
+          {
+            "name": "ctr",
+            "type": "decimal",
+            "description": "Click-through rate for this frequency bucket",
+            "isNullable": false
+          },
+          {
+            "name": "cvr",
+            "type": "decimal",
+            "description": "Conversion rate for this frequency bucket",
+            "isNullable": false
+          },
+          {
+            "name": "optimal_frequency",
+            "type": "integer",
+            "description": "Optimal frequency for this audience",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.0",
+        "lastUpdated": "2025-05-13",
+        "provider": "TransUnion"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 4363.87,
+        "currency": "USD",
+        "billingFrequency": "hourly"
+      }
+    },
+    {
+      "id": "01ca8868-9ee8-42f9-9b3f-ab6d35e8918c",
+      "name": "Attribution_Modeling_Data_1407",
+      "description": "Attribution Modeling Data dataset from HyperMindZ containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CTV Data Feed",
+      "size": "197 TB",
+      "provider": "HyperMindZ",
+      "location": "/data/adtech/user_data_820.csv",
+      "locationType": "local",
+      "credentials": {
+        "type": "local",
+        "details": {
+          "location": "/data/adtech/dataset-775.csv"
+        }
+      },
+      "updateFrequency": "realtime",
+      "lastUpdated": "2025-04-15T22:30:20.747Z",
+      "nextUpdate": null,
+      "status": "active",
+      "qualityScore": 88,
+      "metadata": {
+        "recordCount": 7493697,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "HyperMindZ",
+        "dataSource": "HyperMindZ CTV Data Feed Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "2 years",
+        "tags": [
+          "ctv-data-feed",
+          "hypermindz",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "attribution_id",
+            "type": "string",
+            "description": "Unique identifier for the attribution record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "conversion_id",
+            "type": "string",
+            "description": "Identifier for the conversion",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_type",
+            "type": "string",
+            "description": "Type of conversion",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_value",
+            "type": "decimal",
+            "description": "Value of the conversion",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_timestamp",
+            "type": "timestamp",
+            "description": "When the conversion occurred",
+            "isNullable": false
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user",
+            "isNullable": false
+          },
+          {
+            "name": "touchpoint_ids",
+            "type": "array",
+            "description": "Identifiers for touchpoints in the conversion path",
+            "isNullable": false
+          },
+          {
+            "name": "touchpoint_timestamps",
+            "type": "array",
+            "description": "Timestamps for touchpoints in the conversion path",
+            "isNullable": false
+          },
+          {
+            "name": "touchpoint_types",
+            "type": "array",
+            "description": "Types of touchpoints in the conversion path",
+            "isNullable": false
+          },
+          {
+            "name": "attribution_model",
+            "type": "string",
+            "description": "Attribution model used (last-click, first-click, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "attributed_values",
+            "type": "array",
+            "description": "Values attributed to each touchpoint",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.2",
+        "lastUpdated": "2025-05-13",
+        "provider": "Merkle"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 7820.97,
+        "currency": "USD",
+        "billingFrequency": "monthly"
+      }
+    },
+    {
+      "id": "e78d6ea1-9748-48ca-9009-3e37061404f8",
+      "name": "Sentiment_Analysis_Data_1907",
+      "description": "Sentiment Analysis Data dataset from Nielsen containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "415 TB",
+      "provider": "Nielsen",
+      "location": "s3://adtech-data-2011/dataset-957.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIARUOFVJST",
+          "secretAccessKey": "vu4c32dgqs7",
+          "region": "ap-southeast-1",
+          "credentialType": "iamRole",
+          "bucket": "adtech-data-2982"
+        }
+      },
+      "updateFrequency": "weekly",
+      "lastUpdated": "2025-04-21T22:30:20.747Z",
+      "nextUpdate": "2025-05-21T22:30:20.747Z",
+      "status": "processing",
+      "qualityScore": 69,
+      "metadata": {
+        "recordCount": 8388241,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Nielsen",
+        "dataSource": "Nielsen POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "poi-data",
+          "nielsen",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "analysis_id",
+            "type": "string",
+            "description": "Unique identifier for the sentiment analysis",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Identifier for the analyzed content",
+            "isNullable": false
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "overall_sentiment",
+            "type": "decimal",
+            "description": "Overall sentiment score (-1 to 1)",
+            "isNullable": false
+          },
+          {
+            "name": "sentiment_category",
+            "type": "string",
+            "description": "Sentiment category (positive, neutral, negative)",
+            "isNullable": false
+          },
+          {
+            "name": "positive_score",
+            "type": "decimal",
+            "description": "Positive sentiment score (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "negative_score",
+            "type": "decimal",
+            "description": "Negative sentiment score (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "neutral_score",
+            "type": "decimal",
+            "description": "Neutral sentiment score (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "entity_sentiments",
+            "type": "array",
+            "description": "Sentiment scores for specific entities mentioned",
+            "isNullable": true
+          },
+          {
+            "name": "analysis_timestamp",
+            "type": "timestamp",
+            "description": "When the sentiment analysis was performed",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.8",
+        "lastUpdated": "2025-05-13",
+        "provider": "Lotame"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 29684.91,
+        "currency": "USD",
+        "validityPeriod": 276
+      }
+    },
+    {
+      "id": "67176b0a-90da-455e-beef-0236fd285b36",
+      "name": "Sentiment_Analysis_Data_5415",
+      "description": "Sentiment Analysis Data dataset from Epsilon containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "656 GB",
+      "provider": "Epsilon",
+      "location": "adtech_db.user_data_387",
+      "locationType": "postgres",
+      "credentials": {
+        "type": "postgres",
+        "details": {
+          "host": "postgres-672.amazonaws.com",
+          "port": "5432",
+          "database": "adtech_db",
+          "username": "adtech_user_583",
+          "password": "rue6evgxok8",
+          "schema": "public",
+          "ssl": true
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-15T22:30:20.747Z",
+      "nextUpdate": "2025-05-29T22:30:20.747Z",
+      "status": "error",
+      "qualityScore": 75,
+      "metadata": {
+        "recordCount": 140226,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Epsilon",
+        "dataSource": "Epsilon POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "poi-data",
+          "epsilon",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "analysis_id",
+            "type": "string",
+            "description": "Unique identifier for the sentiment analysis",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Identifier for the analyzed content",
+            "isNullable": false
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "overall_sentiment",
+            "type": "decimal",
+            "description": "Overall sentiment score (-1 to 1)",
+            "isNullable": false
+          },
+          {
+            "name": "sentiment_category",
+            "type": "string",
+            "description": "Sentiment category (positive, neutral, negative)",
+            "isNullable": false
+          },
+          {
+            "name": "positive_score",
+            "type": "decimal",
+            "description": "Positive sentiment score (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "negative_score",
+            "type": "decimal",
+            "description": "Negative sentiment score (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "neutral_score",
+            "type": "decimal",
+            "description": "Neutral sentiment score (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "entity_sentiments",
+            "type": "array",
+            "description": "Sentiment scores for specific entities mentioned",
+            "isNullable": true
+          },
+          {
+            "name": "analysis_timestamp",
+            "type": "timestamp",
+            "description": "When the sentiment analysis was performed",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.5",
+        "lastUpdated": "2025-05-13",
+        "provider": "LiveRamp"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 9087.59,
+        "currency": "USD",
+        "billingFrequency": "realtime"
+      }
+    },
+    {
+      "id": "8ea16ca5-8093-40a2-ad9f-1df4b91a2bab",
+      "name": "Geofencing_Campaign_Data_9551",
+      "description": "Geofencing Campaign Data dataset from Nielsen containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "493 KB",
+      "provider": "Nielsen",
+      "location": "adtech_schema.user_data_331",
+      "locationType": "redshift",
+      "credentials": {
+        "type": "redshift",
+        "details": {
+          "host": "adtech-cluster-757.amazonaws.com",
+          "port": "5439",
+          "database": "adtech_db",
+          "username": "adtech_user_998",
+          "password": "ev24cg40j8",
+          "schema": "adtech_schema"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-16T22:30:20.747Z",
+      "nextUpdate": "2025-05-16T22:30:20.747Z",
+      "status": "processing",
+      "qualityScore": 50,
+      "metadata": {
+        "recordCount": 1775724,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Nielsen",
+        "dataSource": "Nielsen POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "poi-data",
+          "nielsen",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "campaign_id",
+            "type": "string",
+            "description": "Unique identifier for the geofencing campaign",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "campaign_name",
+            "type": "string",
+            "description": "Name of the campaign",
+            "isNullable": false
+          },
+          {
+            "name": "advertiser_id",
+            "type": "string",
+            "description": "Identifier for the advertiser",
+            "isNullable": false
+          },
+          {
+            "name": "geofence_id",
+            "type": "string",
+            "description": "Identifier for the geofence",
+            "isNullable": false
+          },
+          {
+            "name": "geofence_name",
+            "type": "string",
+            "description": "Name of the geofence",
+            "isNullable": false
+          },
+          {
+            "name": "geofence_type",
+            "type": "string",
+            "description": "Type of geofence (radius, polygon, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "geofence_coordinates",
+            "type": "array",
+            "description": "Coordinates defining the geofence",
+            "isNullable": false
+          },
+          {
+            "name": "radius_meters",
+            "type": "integer",
+            "description": "Radius of the geofence in meters (for radius type)",
+            "isNullable": true
+          },
+          {
+            "name": "start_date",
+            "type": "date",
+            "description": "Start date of the campaign",
+            "isNullable": false
+          },
+          {
+            "name": "end_date",
+            "type": "date",
+            "description": "End date of the campaign",
+            "isNullable": false
+          },
+          {
+            "name": "target_audience",
+            "type": "array",
+            "description": "Target audience segments",
+            "isNullable": true
+          },
+          {
+            "name": "entry_trigger",
+            "type": "boolean",
+            "description": "Whether to trigger on entry",
+            "isNullable": false
+          },
+          {
+            "name": "exit_trigger",
+            "type": "boolean",
+            "description": "Whether to trigger on exit",
+            "isNullable": false
+          },
+          {
+            "name": "dwell_time_trigger",
+            "type": "integer",
+            "description": "Dwell time in seconds to trigger (if applicable)",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.2",
+        "lastUpdated": "2025-05-13",
+        "provider": "Acxiom"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 4674.93,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "26595ad6-7632-49be-8f17-b30312c0f99b",
+      "name": "Creative_Performance_Data_2870",
+      "description": "Creative Performance Data dataset from Experian containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CTV Data Feed",
+      "size": "720 MB",
+      "provider": "Experian",
+      "location": "s3://adtech-data-3597/dataset-484.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIASRRAZ8JQ",
+          "secretAccessKey": "d3ahwbq0lzs",
+          "region": "us-west-2",
+          "credentialType": "accessKey",
+          "bucket": "adtech-data-4325"
+        }
+      },
+      "updateFrequency": "weekly",
+      "lastUpdated": "2025-05-05T22:30:20.747Z",
+      "nextUpdate": "2025-06-07T22:30:20.747Z",
+      "status": "processing",
+      "qualityScore": 72,
+      "metadata": {
+        "recordCount": 8431366,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Experian",
+        "dataSource": "Experian CTV Data Feed Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "2 years",
+        "tags": [
+          "ctv-data-feed",
+          "experian",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "performance_id",
+            "type": "string",
+            "description": "Unique identifier for the performance record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "creative_id",
+            "type": "string",
+            "description": "Identifier for the creative",
+            "isNullable": false
+          },
+          {
+            "name": "creative_name",
+            "type": "string",
+            "description": "Name of the creative",
+            "isNullable": false
+          },
+          {
+            "name": "creative_type",
+            "type": "string",
+            "description": "Type of creative (image, video, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "campaign_id",
+            "type": "string",
+            "description": "Identifier for the campaign",
+            "isNullable": false
+          },
+          {
+            "name": "date",
+            "type": "date",
+            "description": "Date of the performance data",
+            "isNullable": false
+          },
+          {
+            "name": "impressions",
+            "type": "integer",
+            "description": "Number of impressions",
+            "isNullable": false
+          },
+          {
+            "name": "clicks",
+            "type": "integer",
+            "description": "Number of clicks",
+            "isNullable": false
+          },
+          {
+            "name": "conversions",
+            "type": "integer",
+            "description": "Number of conversions",
+            "isNullable": false
+          },
+          {
+            "name": "ctr",
+            "type": "decimal",
+            "description": "Click-through rate",
+            "isNullable": false
+          },
+          {
+            "name": "engagement_rate",
+            "type": "decimal",
+            "description": "Engagement rate",
+            "isNullable": true
+          },
+          {
+            "name": "video_completion_rate",
+            "type": "decimal",
+            "description": "Video completion rate (for video creatives)",
+            "isNullable": true
+          },
+          {
+            "name": "average_view_time",
+            "type": "decimal",
+            "description": "Average view time in seconds (for video creatives)",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.5",
+        "lastUpdated": "2025-05-13",
+        "provider": "Merkle"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 53328.09,
+        "currency": "USD",
+        "validityPeriod": 49
+      }
+    },
+    {
+      "id": "6174bd7d-8721-419d-9d02-4054be76efa9",
+      "name": "Attribution_Modeling_Data_2385",
+      "description": "Attribution Modeling Data dataset from Oracle Data Cloud containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CTV Data Feed",
+      "size": "330 TB",
+      "provider": "Oracle Data Cloud",
+      "location": "adtech_db.user_data_643",
+      "locationType": "postgres",
+      "credentials": {
+        "type": "postgres",
+        "details": {
+          "host": "postgres-726.amazonaws.com",
+          "port": "5432",
+          "database": "adtech_db",
+          "username": "adtech_user_878",
+          "password": "n7sc1v89ill",
+          "schema": "public",
+          "ssl": true
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-19T22:30:20.748Z",
+      "nextUpdate": "2025-05-19T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 72,
+      "metadata": {
+        "recordCount": 6395133,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Oracle Data Cloud",
+        "dataSource": "Oracle Data Cloud CTV Data Feed Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "ctv-data-feed",
+          "oracle-data-cloud",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "attribution_id",
+            "type": "string",
+            "description": "Unique identifier for the attribution record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "conversion_id",
+            "type": "string",
+            "description": "Identifier for the conversion",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_type",
+            "type": "string",
+            "description": "Type of conversion",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_value",
+            "type": "decimal",
+            "description": "Value of the conversion",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_timestamp",
+            "type": "timestamp",
+            "description": "When the conversion occurred",
+            "isNullable": false
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user",
+            "isNullable": false
+          },
+          {
+            "name": "touchpoint_ids",
+            "type": "array",
+            "description": "Identifiers for touchpoints in the conversion path",
+            "isNullable": false
+          },
+          {
+            "name": "touchpoint_timestamps",
+            "type": "array",
+            "description": "Timestamps for touchpoints in the conversion path",
+            "isNullable": false
+          },
+          {
+            "name": "touchpoint_types",
+            "type": "array",
+            "description": "Types of touchpoints in the conversion path",
+            "isNullable": false
+          },
+          {
+            "name": "attribution_model",
+            "type": "string",
+            "description": "Attribution model used (last-click, first-click, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "attributed_values",
+            "type": "array",
+            "description": "Values attributed to each touchpoint",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.6",
+        "lastUpdated": "2025-05-13",
+        "provider": "Lotame"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 4289.21,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "d944dde6-034a-4f5c-936f-3802266be29a",
+      "name": "Multi-Touch_Attribution_Data_9233",
+      "description": "Multi-Touch Attribution Data dataset from TransUnion containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CTV Data Feed",
+      "size": "511 GB",
+      "provider": "TransUnion",
+      "location": "project-4036.adtech_dataset.user_data_493",
+      "locationType": "bigquery",
+      "credentials": {
+        "type": "bigquery",
+        "details": {
+          "projectId": "project-7393",
+          "clientEmail": "service-account-320@project-6575.iam.gserviceaccount.com",
+          "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIE...SAMPLE...KEY\n-----END PRIVATE KEY-----\n",
+          "dataset": "adtech_dataset"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-22T22:30:20.748Z",
+      "nextUpdate": "2025-05-26T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 63,
+      "metadata": {
+        "recordCount": 894147,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "TransUnion",
+        "dataSource": "TransUnion CTV Data Feed Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "1 years",
+        "tags": [
+          "ctv-data-feed",
+          "transunion",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "attribution_id",
+            "type": "string",
+            "description": "Unique identifier for the attribution record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_id",
+            "type": "string",
+            "description": "Identifier for the conversion",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_type",
+            "type": "string",
+            "description": "Type of conversion",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_value",
+            "type": "decimal",
+            "description": "Value of the conversion",
+            "isNullable": false
+          },
+          {
+            "name": "conversion_timestamp",
+            "type": "timestamp",
+            "description": "When the conversion occurred",
+            "isNullable": false
+          },
+          {
+            "name": "touchpoint_count",
+            "type": "integer",
+            "description": "Number of touchpoints in the conversion path",
+            "isNullable": false
+          },
+          {
+            "name": "first_touch_channel",
+            "type": "string",
+            "description": "Channel of the first touch",
+            "isNullable": false
+          },
+          {
+            "name": "first_touch_timestamp",
+            "type": "timestamp",
+            "description": "When the first touch occurred",
+            "isNullable": false
+          },
+          {
+            "name": "last_touch_channel",
+            "type": "string",
+            "description": "Channel of the last touch",
+            "isNullable": false
+          },
+          {
+            "name": "last_touch_timestamp",
+            "type": "timestamp",
+            "description": "When the last touch occurred",
+            "isNullable": false
+          },
+          {
+            "name": "channel_weights",
+            "type": "array",
+            "description": "Weights attributed to each channel",
+            "isNullable": false
+          },
+          {
+            "name": "model_type",
+            "type": "string",
+            "description": "Type of attribution model used",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.3",
+        "lastUpdated": "2025-05-13",
+        "provider": "Neustar"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 12667.51,
+        "currency": "USD",
+        "validityPeriod": 52
+      }
+    },
+    {
+      "id": "82f7e6ff-433a-4869-b7df-75788f21693e",
+      "name": "Location_Visitation_Data_1535",
+      "description": "Location Visitation Data dataset from Epsilon containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "905 MB",
+      "provider": "Epsilon",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_283",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "6vbyjbmo",
+          "username": "adtech_user_962",
+          "password": "ll52fv6xiso",
+          "warehouse": "ADTECH_WH_2",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "hourly",
+      "lastUpdated": "2025-04-30T22:30:20.748Z",
+      "nextUpdate": "2025-05-17T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 61,
+      "metadata": {
+        "recordCount": 6743869,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Epsilon",
+        "dataSource": "Epsilon POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "3 years",
+        "tags": [
+          "poi-data",
+          "epsilon",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "visit_id",
+            "type": "string",
+            "description": "Unique identifier for the location visit",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user",
+            "isNullable": false
+          },
+          {
+            "name": "location_id",
+            "type": "string",
+            "description": "Identifier for the location",
+            "isNullable": false
+          },
+          {
+            "name": "location_name",
+            "type": "string",
+            "description": "Name of the location",
+            "isNullable": false
+          },
+          {
+            "name": "location_category",
+            "type": "string",
+            "description": "Category of the location",
+            "isNullable": false
+          },
+          {
+            "name": "latitude",
+            "type": "decimal",
+            "description": "Latitude of the location",
+            "isNullable": false
+          },
+          {
+            "name": "longitude",
+            "type": "decimal",
+            "description": "Longitude of the location",
+            "isNullable": false
+          },
+          {
+            "name": "visit_start",
+            "type": "timestamp",
+            "description": "When the visit started",
+            "isNullable": false
+          },
+          {
+            "name": "visit_end",
+            "type": "timestamp",
+            "description": "When the visit ended",
+            "isNullable": false
+          },
+          {
+            "name": "visit_duration",
+            "type": "integer",
+            "description": "Duration of the visit in seconds",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence in the visit detection (0-1)",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.0",
+        "lastUpdated": "2025-05-13",
+        "provider": "LiveRamp"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 46012.91,
+        "currency": "USD",
+        "validityPeriod": 163
+      }
+    },
+    {
+      "id": "8452eaaf-1d00-467f-b079-5886382b7717",
+      "name": "Cross-Device_Identity_Data_4471",
+      "description": "Cross-Device Identity Data dataset from TransUnion containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "Global MAID to Hashed Email",
+      "size": "231 MB",
+      "provider": "TransUnion",
+      "location": "s3://adtech-data-2182/dataset-162.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIAYEZMF4DK",
+          "secretAccessKey": "onfr9105vt",
+          "region": "eu-west-1",
+          "credentialType": "instanceProfile",
+          "bucket": "adtech-data-8988"
+        }
+      },
+      "updateFrequency": "hourly",
+      "lastUpdated": "2025-04-26T22:30:20.748Z",
+      "nextUpdate": "2025-06-06T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 84,
+      "metadata": {
+        "recordCount": 132170,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "TransUnion",
+        "dataSource": "TransUnion Global MAID to Hashed Email Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "global-maid-to-hashed-email",
+          "transunion",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "identity_id",
+            "type": "string",
+            "description": "Unique identifier for the cross-device identity",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user across devices",
+            "isNullable": false
+          },
+          {
+            "name": "device_id",
+            "type": "string",
+            "description": "Identifier for the device",
+            "isNullable": false
+          },
+          {
+            "name": "device_type",
+            "type": "string",
+            "description": "Type of device (mobile, tablet, desktop, CTV, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "match_type",
+            "type": "string",
+            "description": "How the match was established (deterministic, probabilistic)",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence level of the cross-device match (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "match_timestamp",
+            "type": "timestamp",
+            "description": "When this match was established",
+            "isNullable": false
+          },
+          {
+            "name": "last_seen_timestamp",
+            "type": "timestamp",
+            "description": "When this match was last confirmed",
+            "isNullable": false
+          },
+          {
+            "name": "match_source",
+            "type": "string",
+            "description": "Source of the match data",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.2",
+        "lastUpdated": "2025-05-13",
+        "provider": "Merkle"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 10665.4,
+        "currency": "USD",
+        "billingFrequency": "realtime"
+      }
+    },
+    {
+      "id": "cdb7fb20-e44b-4bf8-b28b-135d4689510d",
+      "name": "Contextual_Targeting_Data_5848",
+      "description": "Contextual Targeting Data dataset from Merkle containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "199 KB",
+      "provider": "Merkle",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_543",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "es7mj92v",
+          "username": "adtech_user_752",
+          "password": "tfoprwumkg",
+          "warehouse": "ADTECH_WH_3",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "monthly",
+      "lastUpdated": "2025-04-16T22:30:20.748Z",
+      "nextUpdate": "2025-05-28T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 99,
+      "metadata": {
+        "recordCount": 8093304,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Merkle",
+        "dataSource": "Merkle POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "poi-data",
+          "merkle",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Unique identifier for the content",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "domain",
+            "type": "string",
+            "description": "Domain of the content",
+            "isNullable": false
+          },
+          {
+            "name": "content_category",
+            "type": "string",
+            "description": "Primary category of the content",
+            "isNullable": false
+          },
+          {
+            "name": "content_subcategory",
+            "type": "string",
+            "description": "Subcategory of the content",
+            "isNullable": true
+          },
+          {
+            "name": "keywords",
+            "type": "array",
+            "description": "Keywords extracted from the content",
+            "isNullable": true
+          },
+          {
+            "name": "sentiment_score",
+            "type": "decimal",
+            "description": "Sentiment analysis score (-1 to 1)",
+            "isNullable": true
+          },
+          {
+            "name": "language",
+            "type": "string",
+            "description": "Language of the content",
+            "isNullable": false
+          },
+          {
+            "name": "content_length",
+            "type": "integer",
+            "description": "Length of the content in characters",
+            "isNullable": true
+          },
+          {
+            "name": "last_crawled",
+            "type": "timestamp",
+            "description": "When the content was last analyzed",
+            "isNullable": false
+          },
+          {
+            "name": "brand_safety_score",
+            "type": "integer",
+            "description": "Brand safety score (0-100)",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.6",
+        "lastUpdated": "2025-05-13",
+        "provider": "HyperMindZ"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 5750.09,
+        "currency": "USD",
+        "validityPeriod": 363
+      }
+    },
+    {
+      "id": "0fb03929-c86f-4202-ba18-41cd7978cc07",
+      "name": "Viewability_Measurement_Data_9512",
+      "description": "Viewability Measurement Data dataset from Lotame containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CTV Data Feed",
+      "size": "30 TB",
+      "provider": "Lotame",
+      "location": "adtech_db.user_data_777",
+      "locationType": "postgres",
+      "credentials": {
+        "type": "postgres",
+        "details": {
+          "host": "postgres-500.amazonaws.com",
+          "port": "5432",
+          "database": "adtech_db",
+          "username": "adtech_user_676",
+          "password": "wmlpzvis4h",
+          "schema": "public",
+          "ssl": true
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-29T22:30:20.748Z",
+      "nextUpdate": "2025-05-18T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 91,
+      "metadata": {
+        "recordCount": 7541990,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Lotame",
+        "dataSource": "Lotame CTV Data Feed Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "ctv-data-feed",
+          "lotame",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "measurement_id",
+            "type": "string",
+            "description": "Unique identifier for the viewability measurement",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "impression_id",
+            "type": "string",
+            "description": "Identifier for the impression",
+            "isNullable": false
+          },
+          {
+            "name": "creative_id",
+            "type": "string",
+            "description": "Identifier for the creative",
+            "isNullable": false
+          },
+          {
+            "name": "campaign_id",
+            "type": "string",
+            "description": "Identifier for the campaign",
+            "isNullable": false
+          },
+          {
+            "name": "placement_id",
+            "type": "string",
+            "description": "Identifier for the placement",
+            "isNullable": false
+          },
+          {
+            "name": "timestamp",
+            "type": "timestamp",
+            "description": "When the measurement was taken",
+            "isNullable": false
+          },
+          {
+            "name": "viewable",
+            "type": "boolean",
+            "description": "Whether the impression was viewable",
+            "isNullable": false
+          },
+          {
+            "name": "viewable_time",
+            "type": "integer",
+            "description": "Time in milliseconds the impression was viewable",
+            "isNullable": false
+          },
+          {
+            "name": "in_view_percentage",
+            "type": "integer",
+            "description": "Percentage of the creative that was in view",
+            "isNullable": false
+          },
+          {
+            "name": "viewport_width",
+            "type": "integer",
+            "description": "Width of the viewport in pixels",
+            "isNullable": true
+          },
+          {
+            "name": "viewport_height",
+            "type": "integer",
+            "description": "Height of the viewport in pixels",
+            "isNullable": true
+          },
+          {
+            "name": "measurement_vendor",
+            "type": "string",
+            "description": "Vendor providing the viewability measurement",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.1",
+        "lastUpdated": "2025-05-13",
+        "provider": "LiveRamp"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 29489.7,
+        "currency": "USD",
+        "validityPeriod": 179
+      }
+    },
+    {
+      "id": "c690a250-1f17-4412-be4e-0a2c81443f1b",
+      "name": "Point_of_Interest_(POI)_Data_2864",
+      "description": "Point of Interest (POI) Data dataset from LiveRamp containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "779 MB",
+      "provider": "LiveRamp",
+      "location": "adtech_db.user_data_132",
+      "locationType": "mysql",
+      "credentials": {
+        "type": "mysql",
+        "details": {
+          "host": "mysql-122.amazonaws.com",
+          "port": "3306",
+          "database": "adtech_db",
+          "username": "adtech_user_151",
+          "password": "1ykcjuev20s",
+          "ssl": true
+        }
+      },
+      "updateFrequency": "weekly",
+      "lastUpdated": "2025-05-10T22:30:20.748Z",
+      "nextUpdate": "2025-06-10T22:30:20.748Z",
+      "status": "error",
+      "qualityScore": 75,
+      "metadata": {
+        "recordCount": 4024152,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "LiveRamp",
+        "dataSource": "LiveRamp POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "2 years",
+        "tags": [
+          "poi-data",
+          "liveramp",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "poi_id",
+            "type": "string",
+            "description": "Unique identifier for the POI",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "poi_name",
+            "type": "string",
+            "description": "Name of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Primary category of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "subcategory",
+            "type": "string",
+            "description": "Subcategory of the POI",
+            "isNullable": true
+          },
+          {
+            "name": "latitude",
+            "type": "decimal",
+            "description": "Latitude of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "longitude",
+            "type": "decimal",
+            "description": "Longitude of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "address",
+            "type": "string",
+            "description": "Street address of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "city",
+            "type": "string",
+            "description": "City of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "state",
+            "type": "string",
+            "description": "State/province of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "country",
+            "type": "string",
+            "description": "Country of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "postal_code",
+            "type": "string",
+            "description": "Postal code of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "phone",
+            "type": "string",
+            "description": "Phone number of the POI",
+            "isNullable": true
+          },
+          {
+            "name": "website",
+            "type": "string",
+            "description": "Website of the POI",
+            "isNullable": true
+          },
+          {
+            "name": "hours",
+            "type": "string",
+            "description": "Operating hours of the POI",
+            "isNullable": true
+          },
+          {
+            "name": "brand_id",
+            "type": "string",
+            "description": "Identifier for the brand of the POI",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.6",
+        "lastUpdated": "2025-05-13",
+        "provider": "Epsilon"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 10645.83,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "3b48ad25-d6a1-4ed8-910a-9c0771f699fb",
+      "name": "Identity_Graph_Enrichment_Data_3501",
+      "description": "Identity Graph Enrichment Data dataset from Oracle Data Cloud containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "Global MAID to Hashed Email",
+      "size": "581 GB",
+      "provider": "Oracle Data Cloud",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_349",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "mwh84fjq",
+          "username": "adtech_user_311",
+          "password": "scm1ch3ezsm",
+          "warehouse": "ADTECH_WH_4",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-05-11T22:30:20.748Z",
+      "nextUpdate": "2025-05-17T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 98,
+      "metadata": {
+        "recordCount": 7530335,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Oracle Data Cloud",
+        "dataSource": "Oracle Data Cloud Global MAID to Hashed Email Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "global-maid-to-hashed-email",
+          "oracle-data-cloud",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "enrichment_id",
+            "type": "string",
+            "description": "Unique identifier for the enrichment record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "User identifier in the identity graph",
+            "isNullable": false
+          },
+          {
+            "name": "enrichment_type",
+            "type": "string",
+            "description": "Type of enrichment (demographic, behavioral, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "enrichment_source",
+            "type": "string",
+            "description": "Source of the enrichment data",
+            "isNullable": false
+          },
+          {
+            "name": "attribute_name",
+            "type": "string",
+            "description": "Name of the enriched attribute",
+            "isNullable": false
+          },
+          {
+            "name": "attribute_value",
+            "type": "string",
+            "description": "Value of the enriched attribute",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence level of the enrichment (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "When this enrichment was created",
+            "isNullable": false
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "When this enrichment was last updated",
+            "isNullable": false
+          },
+          {
+            "name": "ttl_days",
+            "type": "integer",
+            "description": "Time-to-live in days for this enrichment",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.9",
+        "lastUpdated": "2025-05-13",
+        "provider": "Oracle Data Cloud"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 4524.41,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "dd432aa6-0fff-4dc8-bb14-c32e9c237cc6",
+      "name": "Website_Visitation_Data_4550",
+      "description": "Website Visitation Data dataset from HyperMindZ containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CPG Transactions Data",
+      "size": "19 MB",
+      "provider": "HyperMindZ",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_374",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "5qtg3rvk",
+          "username": "adtech_user_903",
+          "password": "8vxhfvjcet",
+          "warehouse": "ADTECH_WH_4",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-05-11T22:30:20.748Z",
+      "nextUpdate": "2025-06-11T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 88,
+      "metadata": {
+        "recordCount": 5771632,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "HyperMindZ",
+        "dataSource": "HyperMindZ CPG Transactions Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "cpg-transactions-data",
+          "hypermindz",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "visit_id",
+            "type": "string",
+            "description": "Unique identifier for the visit",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user",
+            "isNullable": false
+          },
+          {
+            "name": "site_id",
+            "type": "string",
+            "description": "Identifier for the website",
+            "isNullable": false
+          },
+          {
+            "name": "domain",
+            "type": "string",
+            "description": "Domain of the website",
+            "isNullable": false
+          },
+          {
+            "name": "site_category",
+            "type": "string",
+            "description": "Category of the website",
+            "isNullable": false
+          },
+          {
+            "name": "visit_timestamp",
+            "type": "timestamp",
+            "description": "When the visit occurred",
+            "isNullable": false
+          },
+          {
+            "name": "visit_duration",
+            "type": "integer",
+            "description": "Duration of the visit in seconds",
+            "isNullable": false
+          },
+          {
+            "name": "page_views",
+            "type": "integer",
+            "description": "Number of pages viewed during the visit",
+            "isNullable": false
+          },
+          {
+            "name": "entry_page",
+            "type": "string",
+            "description": "Entry page URL",
+            "isNullable": false
+          },
+          {
+            "name": "exit_page",
+            "type": "string",
+            "description": "Exit page URL",
+            "isNullable": false
+          },
+          {
+            "name": "referrer",
+            "type": "string",
+            "description": "Referrer URL",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.2",
+        "lastUpdated": "2025-05-13",
+        "provider": "Epsilon"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 3209.48,
+        "currency": "USD",
+        "billingFrequency": "hourly"
+      }
+    },
+    {
+      "id": "4d601e5e-e8f2-4431-97c8-0941df395be5",
+      "name": "Keyword_Targeting_Data_8000",
+      "description": "Keyword Targeting Data dataset from Epsilon containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "425 TB",
+      "provider": "Epsilon",
+      "location": "project-8649.adtech_dataset.user_data_941",
+      "locationType": "bigquery",
+      "credentials": {
+        "type": "bigquery",
+        "details": {
+          "projectId": "project-8019",
+          "clientEmail": "service-account-677@project-9470.iam.gserviceaccount.com",
+          "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIE...SAMPLE...KEY\n-----END PRIVATE KEY-----\n",
+          "dataset": "adtech_dataset"
+        }
+      },
+      "updateFrequency": "monthly",
+      "lastUpdated": "2025-04-19T22:30:20.748Z",
+      "nextUpdate": "2025-05-17T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 60,
+      "metadata": {
+        "recordCount": 9598441,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Epsilon",
+        "dataSource": "Epsilon POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "2 years",
+        "tags": [
+          "poi-data",
+          "epsilon",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "keyword_id",
+            "type": "string",
+            "description": "Unique identifier for the keyword record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "keyword",
+            "type": "string",
+            "description": "The keyword or phrase",
+            "isNullable": false
+          },
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Identifier for the content containing the keyword",
+            "isNullable": false
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "keyword_category",
+            "type": "string",
+            "description": "Category of the keyword",
+            "isNullable": true
+          },
+          {
+            "name": "relevance_score",
+            "type": "decimal",
+            "description": "Relevance of the keyword to the content (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "occurrence_count",
+            "type": "integer",
+            "description": "Number of times the keyword appears in the content",
+            "isNullable": false
+          },
+          {
+            "name": "keyword_position",
+            "type": "string",
+            "description": "Position of the keyword in the content (title, body, etc.)",
+            "isNullable": true
+          },
+          {
+            "name": "extraction_timestamp",
+            "type": "timestamp",
+            "description": "When the keyword was extracted",
+            "isNullable": false
+          },
+          {
+            "name": "is_branded",
+            "type": "boolean",
+            "description": "Whether the keyword is a brand name",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.0",
+        "lastUpdated": "2025-05-13",
+        "provider": "Nielsen"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 31373.52,
+        "currency": "USD",
+        "validityPeriod": 158
+      }
+    },
+    {
+      "id": "d35a0e16-d407-4be9-8431-bb824685d6ff",
+      "name": "Cross-Device_Identity_Data_3508",
+      "description": "Cross-Device Identity Data dataset from Merkle containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "Global MAID to Hashed Email",
+      "size": "839 MB",
+      "provider": "Merkle",
+      "location": "adtech_db.user_data_758",
+      "locationType": "mysql",
+      "credentials": {
+        "type": "mysql",
+        "details": {
+          "host": "mysql-990.amazonaws.com",
+          "port": "3306",
+          "database": "adtech_db",
+          "username": "adtech_user_853",
+          "password": "dpmbsox63ya",
+          "ssl": true
+        }
+      },
+      "updateFrequency": "yearly",
+      "lastUpdated": "2025-05-09T22:30:20.748Z",
+      "nextUpdate": "2025-05-17T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 90,
+      "metadata": {
+        "recordCount": 1090488,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Merkle",
+        "dataSource": "Merkle Global MAID to Hashed Email Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "1 years",
+        "tags": [
+          "global-maid-to-hashed-email",
+          "merkle",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "identity_id",
+            "type": "string",
+            "description": "Unique identifier for the cross-device identity",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user across devices",
+            "isNullable": false
+          },
+          {
+            "name": "device_id",
+            "type": "string",
+            "description": "Identifier for the device",
+            "isNullable": false
+          },
+          {
+            "name": "device_type",
+            "type": "string",
+            "description": "Type of device (mobile, tablet, desktop, CTV, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "match_type",
+            "type": "string",
+            "description": "How the match was established (deterministic, probabilistic)",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence level of the cross-device match (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "match_timestamp",
+            "type": "timestamp",
+            "description": "When this match was established",
+            "isNullable": false
+          },
+          {
+            "name": "last_seen_timestamp",
+            "type": "timestamp",
+            "description": "When this match was last confirmed",
+            "isNullable": false
+          },
+          {
+            "name": "match_source",
+            "type": "string",
+            "description": "Source of the match data",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.8",
+        "lastUpdated": "2025-05-13",
+        "provider": "Acxiom"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 39473.64,
+        "currency": "USD",
+        "validityPeriod": 199
+      }
+    },
+    {
+      "id": "184f3965-07c5-4d0e-bafe-ce79a1d43536",
+      "name": "Identity_Graph_Enrichment_Data_5113",
+      "description": "Identity Graph Enrichment Data dataset from Lotame containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "Global MAID to Hashed Email",
+      "size": "755 MB",
+      "provider": "Lotame",
+      "location": "project-1861.adtech_dataset.user_data_824",
+      "locationType": "bigquery",
+      "credentials": {
+        "type": "bigquery",
+        "details": {
+          "projectId": "project-5866",
+          "clientEmail": "service-account-719@project-7570.iam.gserviceaccount.com",
+          "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIE...SAMPLE...KEY\n-----END PRIVATE KEY-----\n",
+          "dataset": "adtech_dataset"
+        }
+      },
+      "updateFrequency": "realtime",
+      "lastUpdated": "2025-05-02T22:30:20.748Z",
+      "nextUpdate": null,
+      "status": "active",
+      "qualityScore": 82,
+      "metadata": {
+        "recordCount": 3742384,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Lotame",
+        "dataSource": "Lotame Global MAID to Hashed Email Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "2 years",
+        "tags": [
+          "global-maid-to-hashed-email",
+          "lotame",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "enrichment_id",
+            "type": "string",
+            "description": "Unique identifier for the enrichment record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "User identifier in the identity graph",
+            "isNullable": false
+          },
+          {
+            "name": "enrichment_type",
+            "type": "string",
+            "description": "Type of enrichment (demographic, behavioral, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "enrichment_source",
+            "type": "string",
+            "description": "Source of the enrichment data",
+            "isNullable": false
+          },
+          {
+            "name": "attribute_name",
+            "type": "string",
+            "description": "Name of the enriched attribute",
+            "isNullable": false
+          },
+          {
+            "name": "attribute_value",
+            "type": "string",
+            "description": "Value of the enriched attribute",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence level of the enrichment (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "When this enrichment was created",
+            "isNullable": false
+          },
+          {
+            "name": "updated_timestamp",
+            "type": "timestamp",
+            "description": "When this enrichment was last updated",
+            "isNullable": false
+          },
+          {
+            "name": "ttl_days",
+            "type": "integer",
+            "description": "Time-to-live in days for this enrichment",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.4",
+        "lastUpdated": "2025-05-13",
+        "provider": "TransUnion"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 44872.68,
+        "currency": "USD",
+        "validityPeriod": 201
+      }
+    },
+    {
+      "id": "1a911f9e-5bb7-4471-8658-70dafdbeca8c",
+      "name": "Purchase_Intent_Data_9343",
+      "description": "Purchase Intent Data dataset from Epsilon containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CPG Transactions Data",
+      "size": "975 MB",
+      "provider": "Epsilon",
+      "location": "s3://adtech-data-7928/dataset-666.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIAN8A4D78P",
+          "secretAccessKey": "jzn4897xt4b",
+          "region": "us-east-1",
+          "credentialType": "accessKey",
+          "bucket": "adtech-data-1683"
+        }
+      },
+      "updateFrequency": "weekly",
+      "lastUpdated": "2025-04-19T22:30:20.748Z",
+      "nextUpdate": "2025-05-21T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 77,
+      "metadata": {
+        "recordCount": 2876220,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Epsilon",
+        "dataSource": "Epsilon CPG Transactions Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "1 years",
+        "tags": [
+          "cpg-transactions-data",
+          "epsilon",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Unique identifier for the user",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "product_category",
+            "type": "string",
+            "description": "Category of the product",
+            "isNullable": false
+          },
+          {
+            "name": "product_subcategory",
+            "type": "string",
+            "description": "Subcategory of the product",
+            "isNullable": true
+          },
+          {
+            "name": "brand_name",
+            "type": "string",
+            "description": "Name of the brand",
+            "isNullable": true
+          },
+          {
+            "name": "intent_score",
+            "type": "decimal",
+            "description": "Strength of purchase intent (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "intent_signals",
+            "type": "array",
+            "description": "Signals that indicate purchase intent",
+            "isNullable": true
+          },
+          {
+            "name": "first_observed",
+            "type": "timestamp",
+            "description": "When this intent was first observed",
+            "isNullable": false
+          },
+          {
+            "name": "last_observed",
+            "type": "timestamp",
+            "description": "When this intent was last observed",
+            "isNullable": false
+          },
+          {
+            "name": "expected_purchase_timeframe",
+            "type": "string",
+            "description": "Expected timeframe for purchase (e.g., '0-7 days', '8-30 days')",
+            "isNullable": true
+          },
+          {
+            "name": "intent_source",
+            "type": "string",
+            "description": "Source of the intent data",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.8",
+        "lastUpdated": "2025-05-13",
+        "provider": "Experian"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 44738.01,
+        "currency": "USD",
+        "validityPeriod": 281
+      }
+    },
+    {
+      "id": "53b652c8-38e6-4250-adc7-44e9f7eba57d",
+      "name": "Bid_Stream_Data_3345",
+      "description": "Bid Stream Data dataset from Epsilon containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CTV Data Feed",
+      "size": "220 GB",
+      "provider": "Epsilon",
+      "location": "s3://adtech-data-6528/dataset-642.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIADTQ1TDL1",
+          "secretAccessKey": "9cyah8ppuwv",
+          "region": "ap-southeast-1",
+          "credentialType": "accessKey",
+          "bucket": "adtech-data-6923"
+        }
+      },
+      "updateFrequency": "quarterly",
+      "lastUpdated": "2025-05-02T22:30:20.748Z",
+      "nextUpdate": "2025-05-28T22:30:20.748Z",
+      "status": "processing",
+      "qualityScore": 79,
+      "metadata": {
+        "recordCount": 5348624,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Epsilon",
+        "dataSource": "Epsilon CTV Data Feed Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "ctv-data-feed",
+          "epsilon",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "bid_id",
+            "type": "string",
+            "description": "Unique identifier for the bid request",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "timestamp",
+            "type": "timestamp",
+            "description": "When the bid request was received",
+            "isNullable": false
+          },
+          {
+            "name": "exchange",
+            "type": "string",
+            "description": "Ad exchange where the bid request originated",
+            "isNullable": false
+          },
+          {
+            "name": "publisher_id",
+            "type": "string",
+            "description": "Identifier for the publisher",
+            "isNullable": false
+          },
+          {
+            "name": "site_id",
+            "type": "string",
+            "description": "Identifier for the site",
+            "isNullable": true
+          },
+          {
+            "name": "app_id",
+            "type": "string",
+            "description": "Identifier for the app",
+            "isNullable": true
+          },
+          {
+            "name": "device_type",
+            "type": "string",
+            "description": "Type of device",
+            "isNullable": false
+          },
+          {
+            "name": "os",
+            "type": "string",
+            "description": "Operating system",
+            "isNullable": false
+          },
+          {
+            "name": "browser",
+            "type": "string",
+            "description": "Browser",
+            "isNullable": true
+          },
+          {
+            "name": "country",
+            "type": "string",
+            "description": "Country",
+            "isNullable": false
+          },
+          {
+            "name": "city",
+            "type": "string",
+            "description": "City",
+            "isNullable": true
+          },
+          {
+            "name": "ad_size",
+            "type": "string",
+            "description": "Size of the ad unit",
+            "isNullable": false
+          },
+          {
+            "name": "bid_floor",
+            "type": "decimal",
+            "description": "Minimum bid price",
+            "isNullable": true
+          },
+          {
+            "name": "bid_price",
+            "type": "decimal",
+            "description": "Actual bid price",
+            "isNullable": true
+          },
+          {
+            "name": "win",
+            "type": "boolean",
+            "description": "Whether the bid was won",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.9",
+        "lastUpdated": "2025-05-13",
+        "provider": "Lotame"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 31361.01,
+        "currency": "USD",
+        "validityPeriod": 325
+      }
+    },
+    {
+      "id": "08e61b6e-3a98-464e-859f-c46d08a1fea5",
+      "name": "Natural_Language_Processing_Data_3971",
+      "description": "Natural Language Processing Data dataset from HyperMindZ containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "783 KB",
+      "provider": "HyperMindZ",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_648",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "84wpd5ye",
+          "username": "adtech_user_277",
+          "password": "5nz9l8uyo9l",
+          "warehouse": "ADTECH_WH_1",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "weekly",
+      "lastUpdated": "2025-04-17T22:30:20.748Z",
+      "nextUpdate": "2025-06-11T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 56,
+      "metadata": {
+        "recordCount": 6949655,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "HyperMindZ",
+        "dataSource": "HyperMindZ POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "1 years",
+        "tags": [
+          "poi-data",
+          "hypermindz",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "nlp_id",
+            "type": "string",
+            "description": "Unique identifier for the NLP analysis",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Identifier for the analyzed content",
+            "isNullable": false
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "language_detected",
+            "type": "string",
+            "description": "Detected language of the content",
+            "isNullable": false
+          },
+          {
+            "name": "language_confidence",
+            "type": "decimal",
+            "description": "Confidence in language detection (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "entities",
+            "type": "array",
+            "description": "Named entities extracted from the content",
+            "isNullable": true
+          },
+          {
+            "name": "key_phrases",
+            "type": "array",
+            "description": "Key phrases extracted from the content",
+            "isNullable": true
+          },
+          {
+            "name": "syntax_tree",
+            "type": "string",
+            "description": "JSON representation of the syntax parse tree",
+            "isNullable": true
+          },
+          {
+            "name": "content_summary",
+            "type": "string",
+            "description": "Automatically generated summary",
+            "isNullable": true
+          },
+          {
+            "name": "analysis_timestamp",
+            "type": "timestamp",
+            "description": "When the NLP analysis was performed",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.1",
+        "lastUpdated": "2025-05-13",
+        "provider": "Merkle"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 2295.28,
+        "currency": "USD",
+        "billingFrequency": "hourly"
+      }
+    },
+    {
+      "id": "d9e35c06-578e-454c-ba64-e4fb79d246a1",
+      "name": "Foot_Traffic_Analysis_Data_3106",
+      "description": "Foot Traffic Analysis Data dataset from HyperMindZ containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "391 TB",
+      "provider": "HyperMindZ",
+      "location": "s3://adtech-data-6349/dataset-192.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIAC3HCISPH",
+          "secretAccessKey": "dnbntfp9qqf",
+          "region": "us-east-1",
+          "credentialType": "iamRole",
+          "bucket": "adtech-data-5217"
+        }
+      },
+      "updateFrequency": "yearly",
+      "lastUpdated": "2025-05-09T22:30:20.748Z",
+      "nextUpdate": "2025-05-16T22:30:20.748Z",
+      "status": "processing",
+      "qualityScore": 54,
+      "metadata": {
+        "recordCount": 4331445,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "HyperMindZ",
+        "dataSource": "HyperMindZ POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "poi-data",
+          "hypermindz",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "analysis_id",
+            "type": "string",
+            "description": "Unique identifier for the foot traffic analysis",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "location_id",
+            "type": "string",
+            "description": "Identifier for the location",
+            "isNullable": false
+          },
+          {
+            "name": "location_name",
+            "type": "string",
+            "description": "Name of the location",
+            "isNullable": false
+          },
+          {
+            "name": "location_category",
+            "type": "string",
+            "description": "Category of the location",
+            "isNullable": false
+          },
+          {
+            "name": "date",
+            "type": "date",
+            "description": "Date of the analysis",
+            "isNullable": false
+          },
+          {
+            "name": "hour",
+            "type": "integer",
+            "description": "Hour of the day (0-23)",
+            "isNullable": false
+          },
+          {
+            "name": "visitor_count",
+            "type": "integer",
+            "description": "Number of visitors",
+            "isNullable": false
+          },
+          {
+            "name": "average_dwell_time",
+            "type": "integer",
+            "description": "Average dwell time in seconds",
+            "isNullable": false
+          },
+          {
+            "name": "new_visitor_percentage",
+            "type": "decimal",
+            "description": "Percentage of new visitors",
+            "isNullable": true
+          },
+          {
+            "name": "repeat_visitor_percentage",
+            "type": "decimal",
+            "description": "Percentage of repeat visitors",
+            "isNullable": true
+          },
+          {
+            "name": "peak_hour",
+            "type": "integer",
+            "description": "Hour with the highest foot traffic (0-23)",
+            "isNullable": true
+          },
+          {
+            "name": "weather_condition",
+            "type": "string",
+            "description": "Weather condition during the analysis period",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.0",
+        "lastUpdated": "2025-05-13",
+        "provider": "Acxiom"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 3314.3,
+        "currency": "USD",
+        "billingFrequency": "monthly"
+      }
+    },
+    {
+      "id": "44efe727-35cd-490a-99ba-a3f478193d86",
+      "name": "Purchase_Intent_Data_4178",
+      "description": "Purchase Intent Data dataset from HyperMindZ containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CPG Transactions Data",
+      "size": "368 TB",
+      "provider": "HyperMindZ",
+      "location": "project-7018.adtech_dataset.user_data_425",
+      "locationType": "bigquery",
+      "credentials": {
+        "type": "bigquery",
+        "details": {
+          "projectId": "project-6585",
+          "clientEmail": "service-account-631@project-4790.iam.gserviceaccount.com",
+          "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIE...SAMPLE...KEY\n-----END PRIVATE KEY-----\n",
+          "dataset": "adtech_dataset"
+        }
+      },
+      "updateFrequency": "hourly",
+      "lastUpdated": "2025-04-20T22:30:20.748Z",
+      "nextUpdate": "2025-05-20T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 96,
+      "metadata": {
+        "recordCount": 2271824,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "HyperMindZ",
+        "dataSource": "HyperMindZ CPG Transactions Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "2 years",
+        "tags": [
+          "cpg-transactions-data",
+          "hypermindz",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Unique identifier for the user",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "product_category",
+            "type": "string",
+            "description": "Category of the product",
+            "isNullable": false
+          },
+          {
+            "name": "product_subcategory",
+            "type": "string",
+            "description": "Subcategory of the product",
+            "isNullable": true
+          },
+          {
+            "name": "brand_name",
+            "type": "string",
+            "description": "Name of the brand",
+            "isNullable": true
+          },
+          {
+            "name": "intent_score",
+            "type": "decimal",
+            "description": "Strength of purchase intent (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "intent_signals",
+            "type": "array",
+            "description": "Signals that indicate purchase intent",
+            "isNullable": true
+          },
+          {
+            "name": "first_observed",
+            "type": "timestamp",
+            "description": "When this intent was first observed",
+            "isNullable": false
+          },
+          {
+            "name": "last_observed",
+            "type": "timestamp",
+            "description": "When this intent was last observed",
+            "isNullable": false
+          },
+          {
+            "name": "expected_purchase_timeframe",
+            "type": "string",
+            "description": "Expected timeframe for purchase (e.g., '0-7 days', '8-30 days')",
+            "isNullable": true
+          },
+          {
+            "name": "intent_source",
+            "type": "string",
+            "description": "Source of the intent data",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.8",
+        "lastUpdated": "2025-05-13",
+        "provider": "Neustar"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 9148.4,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "e217aa6e-895c-41af-961e-be2f4364f95e",
+      "name": "Content_Category_Mapping_Data_6290",
+      "description": "Content Category Mapping Data dataset from HyperMindZ containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "846 KB",
+      "provider": "HyperMindZ",
+      "location": "s3://adtech-data-7178/dataset-250.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIAU2CDK0CO",
+          "secretAccessKey": "p9kj05w7lna",
+          "region": "us-west-2",
+          "credentialType": "iamRole",
+          "bucket": "adtech-data-2830"
+        }
+      },
+      "updateFrequency": "weekly",
+      "lastUpdated": "2025-04-26T22:30:20.748Z",
+      "nextUpdate": "2025-06-01T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 100,
+      "metadata": {
+        "recordCount": 3046561,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "HyperMindZ",
+        "dataSource": "HyperMindZ POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "poi-data",
+          "hypermindz",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "mapping_id",
+            "type": "string",
+            "description": "Unique identifier for the category mapping",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Identifier for the content",
+            "isNullable": false
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "taxonomy_id",
+            "type": "string",
+            "description": "Identifier for the taxonomy used",
+            "isNullable": false
+          },
+          {
+            "name": "taxonomy_version",
+            "type": "string",
+            "description": "Version of the taxonomy used",
+            "isNullable": false
+          },
+          {
+            "name": "category_id",
+            "type": "string",
+            "description": "Identifier for the category in the taxonomy",
+            "isNullable": false
+          },
+          {
+            "name": "category_name",
+            "type": "string",
+            "description": "Name of the category",
+            "isNullable": false
+          },
+          {
+            "name": "category_path",
+            "type": "string",
+            "description": "Full path of the category in the taxonomy",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence in the category mapping (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "mapping_timestamp",
+            "type": "timestamp",
+            "description": "When the category mapping was created",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.5",
+        "lastUpdated": "2025-05-13",
+        "provider": "LiveRamp"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 34722.35,
+        "currency": "USD",
+        "validityPeriod": 308
+      }
+    },
+    {
+      "id": "6effbe36-0964-40dc-b4e8-48f7f03d074b",
+      "name": "Brand_Safety_Classification_Data_3454",
+      "description": "Brand Safety Classification Data dataset from LiveRamp containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "745 MB",
+      "provider": "LiveRamp",
+      "location": "/data/adtech/user_data_833.csv",
+      "locationType": "local",
+      "credentials": {
+        "type": "local",
+        "details": {
+          "location": "/data/adtech/dataset-795.csv"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-26T22:30:20.748Z",
+      "nextUpdate": "2025-05-23T22:30:20.748Z",
+      "status": "processing",
+      "qualityScore": 54,
+      "metadata": {
+        "recordCount": 2577562,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "LiveRamp",
+        "dataSource": "LiveRamp POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "poi-data",
+          "liveramp",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Unique identifier for the content",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "domain",
+            "type": "string",
+            "description": "Domain of the content",
+            "isNullable": false
+          },
+          {
+            "name": "overall_safety_score",
+            "type": "integer",
+            "description": "Overall brand safety score (0-100)",
+            "isNullable": false
+          },
+          {
+            "name": "adult_content_score",
+            "type": "integer",
+            "description": "Adult content score (0-100)",
+            "isNullable": false
+          },
+          {
+            "name": "hate_speech_score",
+            "type": "integer",
+            "description": "Hate speech score (0-100)",
+            "isNullable": false
+          },
+          {
+            "name": "violence_score",
+            "type": "integer",
+            "description": "Violence score (0-100)",
+            "isNullable": false
+          },
+          {
+            "name": "illegal_substances_score",
+            "type": "integer",
+            "description": "Illegal substances score (0-100)",
+            "isNullable": false
+          },
+          {
+            "name": "sensitive_topics",
+            "type": "array",
+            "description": "Sensitive topics detected in the content",
+            "isNullable": true
+          },
+          {
+            "name": "safety_category",
+            "type": "string",
+            "description": "Overall safety category (safe, moderate, unsafe)",
+            "isNullable": false
+          },
+          {
+            "name": "analysis_timestamp",
+            "type": "timestamp",
+            "description": "When the brand safety analysis was performed",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.5",
+        "lastUpdated": "2025-05-13",
+        "provider": "Neustar"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 42653.33,
+        "currency": "USD",
+        "validityPeriod": 268
+      }
+    },
+    {
+      "id": "0b0b92be-c51b-4b7a-bf46-13a0e95d58fa",
+      "name": "Cross-Device_Identity_Data_6014",
+      "description": "Cross-Device Identity Data dataset from Lotame containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "Global MAID to Hashed Email",
+      "size": "559 GB",
+      "provider": "Lotame",
+      "location": "s3://adtech-data-3475/dataset-640.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIASRK9Q62R",
+          "secretAccessKey": "kugtxidvu27",
+          "region": "us-east-1",
+          "credentialType": "instanceProfile",
+          "bucket": "adtech-data-4325"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-27T22:30:20.748Z",
+      "nextUpdate": "2025-06-03T22:30:20.748Z",
+      "status": "processing",
+      "qualityScore": 74,
+      "metadata": {
+        "recordCount": 1701315,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Lotame",
+        "dataSource": "Lotame Global MAID to Hashed Email Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "1 years",
+        "tags": [
+          "global-maid-to-hashed-email",
+          "lotame",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "identity_id",
+            "type": "string",
+            "description": "Unique identifier for the cross-device identity",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user across devices",
+            "isNullable": false
+          },
+          {
+            "name": "device_id",
+            "type": "string",
+            "description": "Identifier for the device",
+            "isNullable": false
+          },
+          {
+            "name": "device_type",
+            "type": "string",
+            "description": "Type of device (mobile, tablet, desktop, CTV, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "match_type",
+            "type": "string",
+            "description": "How the match was established (deterministic, probabilistic)",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence level of the cross-device match (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "match_timestamp",
+            "type": "timestamp",
+            "description": "When this match was established",
+            "isNullable": false
+          },
+          {
+            "name": "last_seen_timestamp",
+            "type": "timestamp",
+            "description": "When this match was last confirmed",
+            "isNullable": false
+          },
+          {
+            "name": "match_source",
+            "type": "string",
+            "description": "Source of the match data",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.3",
+        "lastUpdated": "2025-05-13",
+        "provider": "Neustar"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 5418.67,
+        "currency": "USD",
+        "billingFrequency": "weekly"
+      }
+    },
+    {
+      "id": "4f85228c-f4cc-4e29-9583-9a1dfdca0437",
+      "name": "Cookie_Sync_Data_5178",
+      "description": "Cookie Sync Data dataset from Lotame containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "Global MAID to Hashed Email",
+      "size": "936 KB",
+      "provider": "Lotame",
+      "location": "s3://adtech-data-9288/dataset-651.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIA3E1QVZPG",
+          "secretAccessKey": "gzw67wbumti",
+          "region": "us-west-2",
+          "credentialType": "iamRole",
+          "bucket": "adtech-data-7268"
+        }
+      },
+      "updateFrequency": "quarterly",
+      "lastUpdated": "2025-04-21T22:30:20.748Z",
+      "nextUpdate": "2025-05-20T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 83,
+      "metadata": {
+        "recordCount": 6750862,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Lotame",
+        "dataSource": "Lotame Global MAID to Hashed Email Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "2 years",
+        "tags": [
+          "global-maid-to-hashed-email",
+          "lotame",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "sync_id",
+            "type": "string",
+            "description": "Unique identifier for the cookie sync record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "source_platform",
+            "type": "string",
+            "description": "Source platform for the cookie sync",
+            "isNullable": false
+          },
+          {
+            "name": "source_cookie_id",
+            "type": "string",
+            "description": "Cookie ID from the source platform",
+            "isNullable": false
+          },
+          {
+            "name": "destination_platform",
+            "type": "string",
+            "description": "Destination platform for the cookie sync",
+            "isNullable": false
+          },
+          {
+            "name": "destination_cookie_id",
+            "type": "string",
+            "description": "Cookie ID from the destination platform",
+            "isNullable": false
+          },
+          {
+            "name": "sync_timestamp",
+            "type": "timestamp",
+            "description": "When the cookie sync occurred",
+            "isNullable": false
+          },
+          {
+            "name": "expiration_timestamp",
+            "type": "timestamp",
+            "description": "When the cookie sync expires",
+            "isNullable": true
+          },
+          {
+            "name": "sync_type",
+            "type": "string",
+            "description": "Type of sync (server-to-server, pixel, redirect, etc.)",
+            "isNullable": true
+          },
+          {
+            "name": "success",
+            "type": "boolean",
+            "description": "Whether the sync was successful",
+            "isNullable": false
+          },
+          {
+            "name": "ttl_days",
+            "type": "integer",
+            "description": "Time-to-live in days for this sync",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.6",
+        "lastUpdated": "2025-05-13",
+        "provider": "Lotame"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 9169.68,
+        "currency": "USD",
+        "billingFrequency": "weekly"
+      }
+    },
+    {
+      "id": "c0826c36-0ae6-4ecb-84ff-6cfa94e173d4",
+      "name": "Geo-Behavioral_Data_5706",
+      "description": "Geo-Behavioral Data dataset from Merkle containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "12 KB",
+      "provider": "Merkle",
+      "location": "project-5354.adtech_dataset.user_data_316",
+      "locationType": "bigquery",
+      "credentials": {
+        "type": "bigquery",
+        "details": {
+          "projectId": "project-6530",
+          "clientEmail": "service-account-981@project-8583.iam.gserviceaccount.com",
+          "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIE...SAMPLE...KEY\n-----END PRIVATE KEY-----\n",
+          "dataset": "adtech_dataset"
+        }
+      },
+      "updateFrequency": "hourly",
+      "lastUpdated": "2025-05-08T22:30:20.748Z",
+      "nextUpdate": "2025-05-20T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 73,
+      "metadata": {
+        "recordCount": 7296304,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Merkle",
+        "dataSource": "Merkle POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "1 years",
+        "tags": [
+          "poi-data",
+          "merkle",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "behavior_id",
+            "type": "string",
+            "description": "Unique identifier for the geo-behavioral record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user",
+            "isNullable": false
+          },
+          {
+            "name": "behavior_type",
+            "type": "string",
+            "description": "Type of geo-behavioral pattern",
+            "isNullable": false
+          },
+          {
+            "name": "location_category",
+            "type": "string",
+            "description": "Category of locations visited",
+            "isNullable": false
+          },
+          {
+            "name": "visit_frequency",
+            "type": "string",
+            "description": "Frequency of visits (daily, weekly, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "visit_count",
+            "type": "integer",
+            "description": "Number of visits in the observation period",
+            "isNullable": false
+          },
+          {
+            "name": "average_visit_duration",
+            "type": "integer",
+            "description": "Average visit duration in seconds",
+            "isNullable": false
+          },
+          {
+            "name": "first_observed",
+            "type": "timestamp",
+            "description": "When this behavior was first observed",
+            "isNullable": false
+          },
+          {
+            "name": "last_observed",
+            "type": "timestamp",
+            "description": "When this behavior was last observed",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence in the behavioral pattern (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "related_behaviors",
+            "type": "array",
+            "description": "Related behavioral patterns",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.9",
+        "lastUpdated": "2025-05-13",
+        "provider": "Epsilon"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 1894.55,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "982de426-e67a-42c3-bde4-8340f4768ba3",
+      "name": "Competitor_Affinity_Data_4116",
+      "description": "Competitor Affinity Data dataset from Oracle Data Cloud containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CPG Transactions Data",
+      "size": "713 MB",
+      "provider": "Oracle Data Cloud",
+      "location": "s3://adtech-data-4382/dataset-374.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIAS5S4NIEB",
+          "secretAccessKey": "8jslnocrojh",
+          "region": "eu-west-1",
+          "credentialType": "iamRole",
+          "bucket": "adtech-data-3690"
+        }
+      },
+      "updateFrequency": "hourly",
+      "lastUpdated": "2025-04-29T22:30:20.748Z",
+      "nextUpdate": "2025-06-03T22:30:20.748Z",
+      "status": "processing",
+      "qualityScore": 50,
+      "metadata": {
+        "recordCount": 6589058,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Oracle Data Cloud",
+        "dataSource": "Oracle Data Cloud CPG Transactions Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "cpg-transactions-data",
+          "oracle-data-cloud",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Unique identifier for the user",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "brand_id",
+            "type": "string",
+            "description": "Identifier for the primary brand",
+            "isNullable": false
+          },
+          {
+            "name": "competitor_id",
+            "type": "string",
+            "description": "Identifier for the competitor brand",
+            "isNullable": false
+          },
+          {
+            "name": "competitor_name",
+            "type": "string",
+            "description": "Name of the competitor brand",
+            "isNullable": false
+          },
+          {
+            "name": "affinity_score",
+            "type": "decimal",
+            "description": "Strength of competitor affinity (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "relative_affinity",
+            "type": "decimal",
+            "description": "Affinity for competitor relative to primary brand (-1 to 1)",
+            "isNullable": false
+          },
+          {
+            "name": "engagement_count",
+            "type": "integer",
+            "description": "Number of engagements with the competitor",
+            "isNullable": false
+          },
+          {
+            "name": "first_engagement",
+            "type": "timestamp",
+            "description": "When the user first engaged with the competitor",
+            "isNullable": false
+          },
+          {
+            "name": "last_engagement",
+            "type": "timestamp",
+            "description": "When the user last engaged with the competitor",
+            "isNullable": false
+          },
+          {
+            "name": "switching_probability",
+            "type": "decimal",
+            "description": "Probability of switching to competitor (0-1)",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.3",
+        "lastUpdated": "2025-05-13",
+        "provider": "Neustar"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 7032.39,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "6df6d2b8-6f59-4578-bc34-a69cc80430ea",
+      "name": "Cross-Device_Identity_Data_3484",
+      "description": "Cross-Device Identity Data dataset from Experian containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "Global MAID to Hashed Email",
+      "size": "396 GB",
+      "provider": "Experian",
+      "location": "s3://adtech-data-3260/dataset-786.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIACDABNKD8",
+          "secretAccessKey": "pnqoop6y38",
+          "region": "us-east-1",
+          "credentialType": "instanceProfile",
+          "bucket": "adtech-data-3781"
+        }
+      },
+      "updateFrequency": "hourly",
+      "lastUpdated": "2025-05-03T22:30:20.748Z",
+      "nextUpdate": "2025-05-26T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 85,
+      "metadata": {
+        "recordCount": 4332037,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Experian",
+        "dataSource": "Experian Global MAID to Hashed Email Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "global-maid-to-hashed-email",
+          "experian",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "identity_id",
+            "type": "string",
+            "description": "Unique identifier for the cross-device identity",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user across devices",
+            "isNullable": false
+          },
+          {
+            "name": "device_id",
+            "type": "string",
+            "description": "Identifier for the device",
+            "isNullable": false
+          },
+          {
+            "name": "device_type",
+            "type": "string",
+            "description": "Type of device (mobile, tablet, desktop, CTV, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "match_type",
+            "type": "string",
+            "description": "How the match was established (deterministic, probabilistic)",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence level of the cross-device match (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "match_timestamp",
+            "type": "timestamp",
+            "description": "When this match was established",
+            "isNullable": false
+          },
+          {
+            "name": "last_seen_timestamp",
+            "type": "timestamp",
+            "description": "When this match was last confirmed",
+            "isNullable": false
+          },
+          {
+            "name": "match_source",
+            "type": "string",
+            "description": "Source of the match data",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.0",
+        "lastUpdated": "2025-05-13",
+        "provider": "TransUnion"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 8552.44,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "ef1c3d39-a841-49d4-861f-b8b39d0e4d9e",
+      "name": "Hashed_Email_to_MAID_Mapping_3480",
+      "description": "Hashed Email to MAID Mapping dataset from HyperMindZ containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "Global MAID to Hashed Email",
+      "size": "713 GB",
+      "provider": "HyperMindZ",
+      "location": "project-4564.adtech_dataset.user_data_785",
+      "locationType": "bigquery",
+      "credentials": {
+        "type": "bigquery",
+        "details": {
+          "projectId": "project-8037",
+          "clientEmail": "service-account-206@project-1311.iam.gserviceaccount.com",
+          "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIE...SAMPLE...KEY\n-----END PRIVATE KEY-----\n",
+          "dataset": "adtech_dataset"
+        }
+      },
+      "updateFrequency": "quarterly",
+      "lastUpdated": "2025-05-04T22:30:20.748Z",
+      "nextUpdate": "2025-05-23T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 57,
+      "metadata": {
+        "recordCount": 4478910,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "HyperMindZ",
+        "dataSource": "HyperMindZ Global MAID to Hashed Email Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "3 years",
+        "tags": [
+          "global-maid-to-hashed-email",
+          "hypermindz",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "Unique identifier for the mapping record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "hashed_email",
+            "type": "string",
+            "description": "SHA-256 hash of user email",
+            "isNullable": false
+          },
+          {
+            "name": "mobile_ad_id",
+            "type": "string",
+            "description": "Mobile advertising identifier (IDFA/AAID)",
+            "isNullable": false
+          },
+          {
+            "name": "device_type",
+            "type": "string",
+            "description": "Type of mobile device (iOS/Android)",
+            "isNullable": false
+          },
+          {
+            "name": "match_timestamp",
+            "type": "timestamp",
+            "description": "When this mapping was established",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence level of the match (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "description": "Source of the mapping data",
+            "isNullable": true
+          },
+          {
+            "name": "is_active",
+            "type": "boolean",
+            "description": "Whether this mapping is currently active",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.0",
+        "lastUpdated": "2025-05-13",
+        "provider": "Merkle"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 2976.91,
+        "currency": "USD",
+        "billingFrequency": "weekly"
+      }
+    },
+    {
+      "id": "3a65f423-0737-4a08-a541-1b29dc5a043f",
+      "name": "Competitor_Affinity_Data_8957",
+      "description": "Competitor Affinity Data dataset from Epsilon containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CPG Transactions Data",
+      "size": "345 KB",
+      "provider": "Epsilon",
+      "location": "s3://adtech-data-6289/dataset-985.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIAXZTZ8DX9",
+          "secretAccessKey": "ngeuu4nwt4g",
+          "region": "us-west-2",
+          "credentialType": "accessKey",
+          "bucket": "adtech-data-5201"
+        }
+      },
+      "updateFrequency": "hourly",
+      "lastUpdated": "2025-04-28T22:30:20.748Z",
+      "nextUpdate": "2025-05-22T22:30:20.748Z",
+      "status": "processing",
+      "qualityScore": 70,
+      "metadata": {
+        "recordCount": 6151406,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Epsilon",
+        "dataSource": "Epsilon CPG Transactions Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "cpg-transactions-data",
+          "epsilon",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Unique identifier for the user",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "brand_id",
+            "type": "string",
+            "description": "Identifier for the primary brand",
+            "isNullable": false
+          },
+          {
+            "name": "competitor_id",
+            "type": "string",
+            "description": "Identifier for the competitor brand",
+            "isNullable": false
+          },
+          {
+            "name": "competitor_name",
+            "type": "string",
+            "description": "Name of the competitor brand",
+            "isNullable": false
+          },
+          {
+            "name": "affinity_score",
+            "type": "decimal",
+            "description": "Strength of competitor affinity (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "relative_affinity",
+            "type": "decimal",
+            "description": "Affinity for competitor relative to primary brand (-1 to 1)",
+            "isNullable": false
+          },
+          {
+            "name": "engagement_count",
+            "type": "integer",
+            "description": "Number of engagements with the competitor",
+            "isNullable": false
+          },
+          {
+            "name": "first_engagement",
+            "type": "timestamp",
+            "description": "When the user first engaged with the competitor",
+            "isNullable": false
+          },
+          {
+            "name": "last_engagement",
+            "type": "timestamp",
+            "description": "When the user last engaged with the competitor",
+            "isNullable": false
+          },
+          {
+            "name": "switching_probability",
+            "type": "decimal",
+            "description": "Probability of switching to competitor (0-1)",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.5",
+        "lastUpdated": "2025-05-13",
+        "provider": "Experian"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 27444.23,
+        "currency": "USD",
+        "validityPeriod": 336
+      }
+    },
+    {
+      "id": "149131dc-8f71-49b9-baa5-c47196757f2c",
+      "name": "Deterministic_ID_Mapping_7790",
+      "description": "Deterministic ID Mapping dataset from Experian containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "Global MAID to Hashed Email",
+      "size": "986 MB",
+      "provider": "Experian",
+      "location": "adtech_db.user_data_868",
+      "locationType": "mysql",
+      "credentials": {
+        "type": "mysql",
+        "details": {
+          "host": "mysql-594.amazonaws.com",
+          "port": "3306",
+          "database": "adtech_db",
+          "username": "adtech_user_314",
+          "password": "5uod9rl5caj",
+          "ssl": true
+        }
+      },
+      "updateFrequency": "hourly",
+      "lastUpdated": "2025-04-13T22:30:20.748Z",
+      "nextUpdate": "2025-05-24T22:30:20.748Z",
+      "status": "active",
+      "qualityScore": 72,
+      "metadata": {
+        "recordCount": 2967204,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Experian",
+        "dataSource": "Experian Global MAID to Hashed Email Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "3 years",
+        "tags": [
+          "global-maid-to-hashed-email",
+          "experian",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "mapping_id",
+            "type": "string",
+            "description": "Unique identifier for the mapping record",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "source_id",
+            "type": "string",
+            "description": "Source identifier",
+            "isNullable": false
+          },
+          {
+            "name": "source_type",
+            "type": "string",
+            "description": "Type of source identifier (email, phone, login, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "target_id",
+            "type": "string",
+            "description": "Target identifier",
+            "isNullable": false
+          },
+          {
+            "name": "target_type",
+            "type": "string",
+            "description": "Type of target identifier (cookie, device, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "match_source",
+            "type": "string",
+            "description": "Source of the deterministic match (login, CRM, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "created_timestamp",
+            "type": "timestamp",
+            "description": "When this mapping was created",
+            "isNullable": false
+          },
+          {
+            "name": "last_confirmed_timestamp",
+            "type": "timestamp",
+            "description": "When this mapping was last confirmed",
+            "isNullable": false
+          },
+          {
+            "name": "confirmation_count",
+            "type": "integer",
+            "description": "Number of times this mapping has been confirmed",
+            "isNullable": false
+          },
+          {
+            "name": "is_active",
+            "type": "boolean",
+            "description": "Whether this mapping is currently active",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.0",
+        "lastUpdated": "2025-05-13",
+        "provider": "Acxiom"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 4297.7,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "f53cc51d-7810-4bb5-bc50-058e0e160b1c",
+      "name": "Foot_Traffic_Analysis_Data_8711",
+      "description": "Foot Traffic Analysis Data dataset from Experian containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "477 GB",
+      "provider": "Experian",
+      "location": "s3://adtech-data-6396/dataset-453.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIAEW3DC7F4",
+          "secretAccessKey": "244a2ep87hc",
+          "region": "us-east-1",
+          "credentialType": "instanceProfile",
+          "bucket": "adtech-data-7088"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-28T22:30:20.748Z",
+      "nextUpdate": "2025-06-08T22:30:20.749Z",
+      "status": "active",
+      "qualityScore": 77,
+      "metadata": {
+        "recordCount": 3963509,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Experian",
+        "dataSource": "Experian POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "poi-data",
+          "experian",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "analysis_id",
+            "type": "string",
+            "description": "Unique identifier for the foot traffic analysis",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "location_id",
+            "type": "string",
+            "description": "Identifier for the location",
+            "isNullable": false
+          },
+          {
+            "name": "location_name",
+            "type": "string",
+            "description": "Name of the location",
+            "isNullable": false
+          },
+          {
+            "name": "location_category",
+            "type": "string",
+            "description": "Category of the location",
+            "isNullable": false
+          },
+          {
+            "name": "date",
+            "type": "date",
+            "description": "Date of the analysis",
+            "isNullable": false
+          },
+          {
+            "name": "hour",
+            "type": "integer",
+            "description": "Hour of the day (0-23)",
+            "isNullable": false
+          },
+          {
+            "name": "visitor_count",
+            "type": "integer",
+            "description": "Number of visitors",
+            "isNullable": false
+          },
+          {
+            "name": "average_dwell_time",
+            "type": "integer",
+            "description": "Average dwell time in seconds",
+            "isNullable": false
+          },
+          {
+            "name": "new_visitor_percentage",
+            "type": "decimal",
+            "description": "Percentage of new visitors",
+            "isNullable": true
+          },
+          {
+            "name": "repeat_visitor_percentage",
+            "type": "decimal",
+            "description": "Percentage of repeat visitors",
+            "isNullable": true
+          },
+          {
+            "name": "peak_hour",
+            "type": "integer",
+            "description": "Hour with the highest foot traffic (0-23)",
+            "isNullable": true
+          },
+          {
+            "name": "weather_condition",
+            "type": "string",
+            "description": "Weather condition during the analysis period",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.9",
+        "lastUpdated": "2025-05-13",
+        "provider": "Lotame"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 7430.56,
+        "currency": "USD",
+        "billingFrequency": "hourly"
+      }
+    },
+    {
+      "id": "395ccd20-68fa-4c24-91fb-e3b88c288057",
+      "name": "Store_Visitation_Data_4157",
+      "description": "Store Visitation Data dataset from Neustar containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "116 MB",
+      "provider": "Neustar",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_678",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "to9usupm",
+          "username": "adtech_user_223",
+          "password": "3zmm4ogbnmv",
+          "warehouse": "ADTECH_WH_1",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-05-01T22:30:20.749Z",
+      "nextUpdate": "2025-06-11T22:30:20.749Z",
+      "status": "active",
+      "qualityScore": 60,
+      "metadata": {
+        "recordCount": 536091,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Neustar",
+        "dataSource": "Neustar POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "poi-data",
+          "neustar",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "visit_id",
+            "type": "string",
+            "description": "Unique identifier for the store visit",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user",
+            "isNullable": false
+          },
+          {
+            "name": "store_id",
+            "type": "string",
+            "description": "Identifier for the store",
+            "isNullable": false
+          },
+          {
+            "name": "store_name",
+            "type": "string",
+            "description": "Name of the store",
+            "isNullable": false
+          },
+          {
+            "name": "brand_id",
+            "type": "string",
+            "description": "Identifier for the brand",
+            "isNullable": false
+          },
+          {
+            "name": "visit_timestamp",
+            "type": "timestamp",
+            "description": "When the visit occurred",
+            "isNullable": false
+          },
+          {
+            "name": "visit_duration",
+            "type": "integer",
+            "description": "Duration of the visit in seconds",
+            "isNullable": false
+          },
+          {
+            "name": "visit_type",
+            "type": "string",
+            "description": "Type of visit (first-time, repeat, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "previous_visit_timestamp",
+            "type": "timestamp",
+            "description": "When the previous visit occurred",
+            "isNullable": true
+          },
+          {
+            "name": "visit_count",
+            "type": "integer",
+            "description": "Number of visits to this store",
+            "isNullable": false
+          },
+          {
+            "name": "conversion",
+            "type": "boolean",
+            "description": "Whether a purchase was made during the visit",
+            "isNullable": true
+          },
+          {
+            "name": "conversion_value",
+            "type": "decimal",
+            "description": "Value of the purchase (if applicable)",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.8",
+        "lastUpdated": "2025-05-13",
+        "provider": "LiveRamp"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 8762.61,
+        "currency": "USD",
+        "billingFrequency": "weekly"
+      }
+    },
+    {
+      "id": "ddc396e9-c409-42fc-920a-128bb9068783",
+      "name": "Video_Content_Analysis_Data_4313",
+      "description": "Video Content Analysis Data dataset from TransUnion containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "935 TB",
+      "provider": "TransUnion",
+      "location": "project-4298.adtech_dataset.user_data_464",
+      "locationType": "bigquery",
+      "credentials": {
+        "type": "bigquery",
+        "details": {
+          "projectId": "project-5073",
+          "clientEmail": "service-account-180@project-1752.iam.gserviceaccount.com",
+          "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIE...SAMPLE...KEY\n-----END PRIVATE KEY-----\n",
+          "dataset": "adtech_dataset"
+        }
+      },
+      "updateFrequency": "realtime",
+      "lastUpdated": "2025-04-16T22:30:20.749Z",
+      "nextUpdate": null,
+      "status": "active",
+      "qualityScore": 72,
+      "metadata": {
+        "recordCount": 7397250,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "TransUnion",
+        "dataSource": "TransUnion POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "3 years",
+        "tags": [
+          "poi-data",
+          "transunion",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "analysis_id",
+            "type": "string",
+            "description": "Unique identifier for the video analysis",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "video_id",
+            "type": "string",
+            "description": "Identifier for the video",
+            "isNullable": false
+          },
+          {
+            "name": "video_url",
+            "type": "string",
+            "description": "URL of the video",
+            "isNullable": false
+          },
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Identifier for the content containing the video",
+            "isNullable": true
+          },
+          {
+            "name": "video_duration",
+            "type": "integer",
+            "description": "Duration of the video in seconds",
+            "isNullable": false
+          },
+          {
+            "name": "scene_changes",
+            "type": "array",
+            "description": "Timestamps of scene changes",
+            "isNullable": true
+          },
+          {
+            "name": "objects_detected",
+            "type": "array",
+            "description": "Objects detected in the video",
+            "isNullable": true
+          },
+          {
+            "name": "object_timestamps",
+            "type": "array",
+            "description": "Timestamps of object appearances",
+            "isNullable": true
+          },
+          {
+            "name": "transcript",
+            "type": "string",
+            "description": "Transcript of speech in the video",
+            "isNullable": true
+          },
+          {
+            "name": "content_categories",
+            "type": "array",
+            "description": "Categories of the video content",
+            "isNullable": false
+          },
+          {
+            "name": "brand_safety_score",
+            "type": "integer",
+            "description": "Brand safety score of the video (0-100)",
+            "isNullable": false
+          },
+          {
+            "name": "analysis_timestamp",
+            "type": "timestamp",
+            "description": "When the video analysis was performed",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.4",
+        "lastUpdated": "2025-05-13",
+        "provider": "Merkle"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 7238.42,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "3110d67d-fb07-40c5-b742-8a8387d78d63",
+      "name": "Semantic_Content_Analysis_Data_3235",
+      "description": "Semantic Content Analysis Data dataset from Nielsen containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "263 TB",
+      "provider": "Nielsen",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_258",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "2y5bsytf",
+          "username": "adtech_user_741",
+          "password": "w87z6nffehh",
+          "warehouse": "ADTECH_WH_3",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-05-05T22:30:20.749Z",
+      "nextUpdate": "2025-05-19T22:30:20.749Z",
+      "status": "error",
+      "qualityScore": 88,
+      "metadata": {
+        "recordCount": 739790,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Nielsen",
+        "dataSource": "Nielsen POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "2 years",
+        "tags": [
+          "poi-data",
+          "nielsen",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Unique identifier for the content",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "description": "Title of the content",
+            "isNullable": false
+          },
+          {
+            "name": "main_topic",
+            "type": "string",
+            "description": "Main topic of the content",
+            "isNullable": false
+          },
+          {
+            "name": "subtopics",
+            "type": "array",
+            "description": "Subtopics covered in the content",
+            "isNullable": true
+          },
+          {
+            "name": "entities",
+            "type": "array",
+            "description": "Named entities mentioned in the content",
+            "isNullable": true
+          },
+          {
+            "name": "entity_types",
+            "type": "array",
+            "description": "Types of entities mentioned (person, organization, etc.)",
+            "isNullable": true
+          },
+          {
+            "name": "semantic_categories",
+            "type": "array",
+            "description": "Semantic categories of the content",
+            "isNullable": false
+          },
+          {
+            "name": "content_summary",
+            "type": "string",
+            "description": "Automatically generated summary of the content",
+            "isNullable": true
+          },
+          {
+            "name": "analysis_timestamp",
+            "type": "timestamp",
+            "description": "When the semantic analysis was performed",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.5",
+        "lastUpdated": "2025-05-13",
+        "provider": "LiveRamp"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 3724.08,
+        "currency": "USD",
+        "billingFrequency": "hourly"
+      }
+    },
+    {
+      "id": "217e34d9-f708-4013-8202-7e1291aff615",
+      "name": "Location_Visitation_Data_1011",
+      "description": "Location Visitation Data dataset from HyperMindZ containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "802 TB",
+      "provider": "HyperMindZ",
+      "location": "s3://adtech-data-8812/dataset-821.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIAIU2H2IO9",
+          "secretAccessKey": "z23szt7gz8",
+          "region": "us-east-1",
+          "credentialType": "iamRole",
+          "bucket": "adtech-data-4582"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-05-05T22:30:20.749Z",
+      "nextUpdate": "2025-06-09T22:30:20.749Z",
+      "status": "active",
+      "qualityScore": 59,
+      "metadata": {
+        "recordCount": 1340641,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "HyperMindZ",
+        "dataSource": "HyperMindZ POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "poi-data",
+          "hypermindz",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "visit_id",
+            "type": "string",
+            "description": "Unique identifier for the location visit",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user",
+            "isNullable": false
+          },
+          {
+            "name": "location_id",
+            "type": "string",
+            "description": "Identifier for the location",
+            "isNullable": false
+          },
+          {
+            "name": "location_name",
+            "type": "string",
+            "description": "Name of the location",
+            "isNullable": false
+          },
+          {
+            "name": "location_category",
+            "type": "string",
+            "description": "Category of the location",
+            "isNullable": false
+          },
+          {
+            "name": "latitude",
+            "type": "decimal",
+            "description": "Latitude of the location",
+            "isNullable": false
+          },
+          {
+            "name": "longitude",
+            "type": "decimal",
+            "description": "Longitude of the location",
+            "isNullable": false
+          },
+          {
+            "name": "visit_start",
+            "type": "timestamp",
+            "description": "When the visit started",
+            "isNullable": false
+          },
+          {
+            "name": "visit_end",
+            "type": "timestamp",
+            "description": "When the visit ended",
+            "isNullable": false
+          },
+          {
+            "name": "visit_duration",
+            "type": "integer",
+            "description": "Duration of the visit in seconds",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence in the visit detection (0-1)",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.7",
+        "lastUpdated": "2025-05-13",
+        "provider": "LiveRamp"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 3543.53,
+        "currency": "USD",
+        "billingFrequency": "realtime"
+      }
+    },
+    {
+      "id": "41f41a1c-45a9-4631-a680-44f6126870de",
+      "name": "Bid_Stream_Data_2245",
+      "description": "Bid Stream Data dataset from Oracle Data Cloud containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CTV Data Feed",
+      "size": "488 TB",
+      "provider": "Oracle Data Cloud",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_248",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "gy232a8n",
+          "username": "adtech_user_503",
+          "password": "6vcbzrj4fmc",
+          "warehouse": "ADTECH_WH_4",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "realtime",
+      "lastUpdated": "2025-04-30T22:30:20.749Z",
+      "nextUpdate": null,
+      "status": "active",
+      "qualityScore": 82,
+      "metadata": {
+        "recordCount": 5602177,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Oracle Data Cloud",
+        "dataSource": "Oracle Data Cloud CTV Data Feed Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "ctv-data-feed",
+          "oracle-data-cloud",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "bid_id",
+            "type": "string",
+            "description": "Unique identifier for the bid request",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "timestamp",
+            "type": "timestamp",
+            "description": "When the bid request was received",
+            "isNullable": false
+          },
+          {
+            "name": "exchange",
+            "type": "string",
+            "description": "Ad exchange where the bid request originated",
+            "isNullable": false
+          },
+          {
+            "name": "publisher_id",
+            "type": "string",
+            "description": "Identifier for the publisher",
+            "isNullable": false
+          },
+          {
+            "name": "site_id",
+            "type": "string",
+            "description": "Identifier for the site",
+            "isNullable": true
+          },
+          {
+            "name": "app_id",
+            "type": "string",
+            "description": "Identifier for the app",
+            "isNullable": true
+          },
+          {
+            "name": "device_type",
+            "type": "string",
+            "description": "Type of device",
+            "isNullable": false
+          },
+          {
+            "name": "os",
+            "type": "string",
+            "description": "Operating system",
+            "isNullable": false
+          },
+          {
+            "name": "browser",
+            "type": "string",
+            "description": "Browser",
+            "isNullable": true
+          },
+          {
+            "name": "country",
+            "type": "string",
+            "description": "Country",
+            "isNullable": false
+          },
+          {
+            "name": "city",
+            "type": "string",
+            "description": "City",
+            "isNullable": true
+          },
+          {
+            "name": "ad_size",
+            "type": "string",
+            "description": "Size of the ad unit",
+            "isNullable": false
+          },
+          {
+            "name": "bid_floor",
+            "type": "decimal",
+            "description": "Minimum bid price",
+            "isNullable": true
+          },
+          {
+            "name": "bid_price",
+            "type": "decimal",
+            "description": "Actual bid price",
+            "isNullable": true
+          },
+          {
+            "name": "win",
+            "type": "boolean",
+            "description": "Whether the bid was won",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.7",
+        "lastUpdated": "2025-05-13",
+        "provider": "Lotame"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 4371.27,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "07e309ad-ec62-4d8c-bdf4-bfb064035978",
+      "name": "Location_Visitation_Data_7644",
+      "description": "Location Visitation Data dataset from Acxiom containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "870 GB",
+      "provider": "Acxiom",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_923",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "u0x1ygzj",
+          "username": "adtech_user_871",
+          "password": "v3po2y2knnk",
+          "warehouse": "ADTECH_WH_3",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-15T22:30:20.749Z",
+      "nextUpdate": "2025-05-20T22:30:20.749Z",
+      "status": "active",
+      "qualityScore": 56,
+      "metadata": {
+        "recordCount": 1117494,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Acxiom",
+        "dataSource": "Acxiom POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "5 years",
+        "tags": [
+          "poi-data",
+          "acxiom",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "visit_id",
+            "type": "string",
+            "description": "Unique identifier for the location visit",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user",
+            "isNullable": false
+          },
+          {
+            "name": "location_id",
+            "type": "string",
+            "description": "Identifier for the location",
+            "isNullable": false
+          },
+          {
+            "name": "location_name",
+            "type": "string",
+            "description": "Name of the location",
+            "isNullable": false
+          },
+          {
+            "name": "location_category",
+            "type": "string",
+            "description": "Category of the location",
+            "isNullable": false
+          },
+          {
+            "name": "latitude",
+            "type": "decimal",
+            "description": "Latitude of the location",
+            "isNullable": false
+          },
+          {
+            "name": "longitude",
+            "type": "decimal",
+            "description": "Longitude of the location",
+            "isNullable": false
+          },
+          {
+            "name": "visit_start",
+            "type": "timestamp",
+            "description": "When the visit started",
+            "isNullable": false
+          },
+          {
+            "name": "visit_end",
+            "type": "timestamp",
+            "description": "When the visit ended",
+            "isNullable": false
+          },
+          {
+            "name": "visit_duration",
+            "type": "integer",
+            "description": "Duration of the visit in seconds",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence in the visit detection (0-1)",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.4",
+        "lastUpdated": "2025-05-13",
+        "provider": "TransUnion"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 48171.63,
+        "currency": "USD",
+        "validityPeriod": 44
+      }
+    },
+    {
+      "id": "4e42c631-a5c7-493e-b76c-deded7381f4f",
+      "name": "Semantic_Content_Analysis_Data_9758",
+      "description": "Semantic Content Analysis Data dataset from TransUnion containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "964 GB",
+      "provider": "TransUnion",
+      "location": "adtech_schema.user_data_310",
+      "locationType": "redshift",
+      "credentials": {
+        "type": "redshift",
+        "details": {
+          "host": "adtech-cluster-948.amazonaws.com",
+          "port": "5439",
+          "database": "adtech_db",
+          "username": "adtech_user_968",
+          "password": "ca3fxih0idq",
+          "schema": "adtech_schema"
+        }
+      },
+      "updateFrequency": "hourly",
+      "lastUpdated": "2025-04-28T22:30:20.749Z",
+      "nextUpdate": "2025-05-19T22:30:20.749Z",
+      "status": "active",
+      "qualityScore": 99,
+      "metadata": {
+        "recordCount": 9219342,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "TransUnion",
+        "dataSource": "TransUnion POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "1 years",
+        "tags": [
+          "poi-data",
+          "transunion",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Unique identifier for the content",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "description": "Title of the content",
+            "isNullable": false
+          },
+          {
+            "name": "main_topic",
+            "type": "string",
+            "description": "Main topic of the content",
+            "isNullable": false
+          },
+          {
+            "name": "subtopics",
+            "type": "array",
+            "description": "Subtopics covered in the content",
+            "isNullable": true
+          },
+          {
+            "name": "entities",
+            "type": "array",
+            "description": "Named entities mentioned in the content",
+            "isNullable": true
+          },
+          {
+            "name": "entity_types",
+            "type": "array",
+            "description": "Types of entities mentioned (person, organization, etc.)",
+            "isNullable": true
+          },
+          {
+            "name": "semantic_categories",
+            "type": "array",
+            "description": "Semantic categories of the content",
+            "isNullable": false
+          },
+          {
+            "name": "content_summary",
+            "type": "string",
+            "description": "Automatically generated summary of the content",
+            "isNullable": true
+          },
+          {
+            "name": "analysis_timestamp",
+            "type": "timestamp",
+            "description": "When the semantic analysis was performed",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.8",
+        "lastUpdated": "2025-05-13",
+        "provider": "Nielsen"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 10092.83,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "6e824e1f-b209-4ab0-a7eb-964f48b853ba",
+      "name": "Purchase_Intent_Data_5935",
+      "description": "Purchase Intent Data dataset from Nielsen containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CPG Transactions Data",
+      "size": "797 MB",
+      "provider": "Nielsen",
+      "location": "s3://adtech-data-1066/dataset-270.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIAYC5LH74K",
+          "secretAccessKey": "23zlmu2p5wh",
+          "region": "us-east-1",
+          "credentialType": "iamRole",
+          "bucket": "adtech-data-6883"
+        }
+      },
+      "updateFrequency": "weekly",
+      "lastUpdated": "2025-05-03T22:30:20.749Z",
+      "nextUpdate": "2025-05-24T22:30:20.749Z",
+      "status": "processing",
+      "qualityScore": 70,
+      "metadata": {
+        "recordCount": 7036680,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Nielsen",
+        "dataSource": "Nielsen CPG Transactions Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "2 years",
+        "tags": [
+          "cpg-transactions-data",
+          "nielsen",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Unique identifier for the user",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "product_category",
+            "type": "string",
+            "description": "Category of the product",
+            "isNullable": false
+          },
+          {
+            "name": "product_subcategory",
+            "type": "string",
+            "description": "Subcategory of the product",
+            "isNullable": true
+          },
+          {
+            "name": "brand_name",
+            "type": "string",
+            "description": "Name of the brand",
+            "isNullable": true
+          },
+          {
+            "name": "intent_score",
+            "type": "decimal",
+            "description": "Strength of purchase intent (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "intent_signals",
+            "type": "array",
+            "description": "Signals that indicate purchase intent",
+            "isNullable": true
+          },
+          {
+            "name": "first_observed",
+            "type": "timestamp",
+            "description": "When this intent was first observed",
+            "isNullable": false
+          },
+          {
+            "name": "last_observed",
+            "type": "timestamp",
+            "description": "When this intent was last observed",
+            "isNullable": false
+          },
+          {
+            "name": "expected_purchase_timeframe",
+            "type": "string",
+            "description": "Expected timeframe for purchase (e.g., '0-7 days', '8-30 days')",
+            "isNullable": true
+          },
+          {
+            "name": "intent_source",
+            "type": "string",
+            "description": "Source of the intent data",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.8",
+        "lastUpdated": "2025-05-13",
+        "provider": "HyperMindZ"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 9200.05,
+        "currency": "USD",
+        "billingFrequency": "hourly"
+      }
+    },
+    {
+      "id": "1d408220-2fc2-40d3-8e4e-2d43c480237d",
+      "name": "Demographic_Audience_Data_4345",
+      "description": "Demographic Audience Data dataset from Nielsen containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "Business/Firmographic Data",
+      "size": "487 TB",
+      "provider": "Nielsen",
+      "location": "project-8165.adtech_dataset.user_data_324",
+      "locationType": "bigquery",
+      "credentials": {
+        "type": "bigquery",
+        "details": {
+          "projectId": "project-7665",
+          "clientEmail": "service-account-891@project-9441.iam.gserviceaccount.com",
+          "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIE...SAMPLE...KEY\n-----END PRIVATE KEY-----\n",
+          "dataset": "adtech_dataset"
+        }
+      },
+      "updateFrequency": "daily",
+      "lastUpdated": "2025-04-13T22:30:20.749Z",
+      "nextUpdate": "2025-06-10T22:30:20.749Z",
+      "status": "active",
+      "qualityScore": 87,
+      "metadata": {
+        "recordCount": 6037625,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Nielsen",
+        "dataSource": "Nielsen Business/Firmographic Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "1 years",
+        "tags": [
+          "business/firmographic-data",
+          "nielsen",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Unique identifier for the user",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "age_range",
+            "type": "string",
+            "description": "Age range of the user",
+            "isNullable": true
+          },
+          {
+            "name": "gender",
+            "type": "string",
+            "description": "Gender of the user",
+            "isNullable": true
+          },
+          {
+            "name": "income_range",
+            "type": "string",
+            "description": "Household income range",
+            "isNullable": true
+          },
+          {
+            "name": "education_level",
+            "type": "string",
+            "description": "Highest education level attained",
+            "isNullable": true
+          },
+          {
+            "name": "marital_status",
+            "type": "string",
+            "description": "Marital status",
+            "isNullable": true
+          },
+          {
+            "name": "household_size",
+            "type": "integer",
+            "description": "Number of people in household",
+            "isNullable": true
+          },
+          {
+            "name": "presence_of_children",
+            "type": "boolean",
+            "description": "Whether children are present in the household",
+            "isNullable": true
+          },
+          {
+            "name": "homeowner_status",
+            "type": "string",
+            "description": "Homeowner, renter, etc.",
+            "isNullable": true
+          },
+          {
+            "name": "occupation_category",
+            "type": "string",
+            "description": "Category of occupation",
+            "isNullable": true
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence in demographic data accuracy (0-1)",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.0",
+        "lastUpdated": "2025-05-13",
+        "provider": "HyperMindZ"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 2050.03,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "6681b86e-5bdc-40cf-a184-7519f6da2d2a",
+      "name": "Website_Visitation_Data_3404",
+      "description": "Website Visitation Data dataset from Experian containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CPG Transactions Data",
+      "size": "142 MB",
+      "provider": "Experian",
+      "location": "s3://adtech-data-7465/dataset-374.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIAMAWAP4XB",
+          "secretAccessKey": "gjkrp8177xb",
+          "region": "eu-west-1",
+          "credentialType": "instanceProfile",
+          "bucket": "adtech-data-4829"
+        }
+      },
+      "updateFrequency": "monthly",
+      "lastUpdated": "2025-05-01T22:30:20.749Z",
+      "nextUpdate": "2025-05-19T22:30:20.749Z",
+      "status": "processing",
+      "qualityScore": 73,
+      "metadata": {
+        "recordCount": 714948,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Experian",
+        "dataSource": "Experian CPG Transactions Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "1 years",
+        "tags": [
+          "cpg-transactions-data",
+          "experian",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "visit_id",
+            "type": "string",
+            "description": "Unique identifier for the visit",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Identifier for the user",
+            "isNullable": false
+          },
+          {
+            "name": "site_id",
+            "type": "string",
+            "description": "Identifier for the website",
+            "isNullable": false
+          },
+          {
+            "name": "domain",
+            "type": "string",
+            "description": "Domain of the website",
+            "isNullable": false
+          },
+          {
+            "name": "site_category",
+            "type": "string",
+            "description": "Category of the website",
+            "isNullable": false
+          },
+          {
+            "name": "visit_timestamp",
+            "type": "timestamp",
+            "description": "When the visit occurred",
+            "isNullable": false
+          },
+          {
+            "name": "visit_duration",
+            "type": "integer",
+            "description": "Duration of the visit in seconds",
+            "isNullable": false
+          },
+          {
+            "name": "page_views",
+            "type": "integer",
+            "description": "Number of pages viewed during the visit",
+            "isNullable": false
+          },
+          {
+            "name": "entry_page",
+            "type": "string",
+            "description": "Entry page URL",
+            "isNullable": false
+          },
+          {
+            "name": "exit_page",
+            "type": "string",
+            "description": "Exit page URL",
+            "isNullable": false
+          },
+          {
+            "name": "referrer",
+            "type": "string",
+            "description": "Referrer URL",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.0",
+        "lastUpdated": "2025-05-13",
+        "provider": "Lotame"
+      },
+      "pricing": {
+        "type": "one-time",
+        "amount": 29517.54,
+        "currency": "USD",
+        "validityPeriod": 241
+      }
+    },
+    {
+      "id": "f6dfaacb-f5e6-4fe5-a1c6-cbfad4e4470c",
+      "name": "Content_Category_Mapping_Data_9433",
+      "description": "Content Category Mapping Data dataset from Neustar containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "232 GB",
+      "provider": "Neustar",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_263",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "7crgaiw6",
+          "username": "adtech_user_281",
+          "password": "fgj9zixebdh",
+          "warehouse": "ADTECH_WH_4",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "hourly",
+      "lastUpdated": "2025-04-20T22:30:20.749Z",
+      "nextUpdate": "2025-06-07T22:30:20.749Z",
+      "status": "active",
+      "qualityScore": 68,
+      "metadata": {
+        "recordCount": 1185059,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Neustar",
+        "dataSource": "Neustar POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "3 years",
+        "tags": [
+          "poi-data",
+          "neustar",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "mapping_id",
+            "type": "string",
+            "description": "Unique identifier for the category mapping",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "content_id",
+            "type": "string",
+            "description": "Identifier for the content",
+            "isNullable": false
+          },
+          {
+            "name": "url",
+            "type": "string",
+            "description": "URL of the content",
+            "isNullable": false
+          },
+          {
+            "name": "taxonomy_id",
+            "type": "string",
+            "description": "Identifier for the taxonomy used",
+            "isNullable": false
+          },
+          {
+            "name": "taxonomy_version",
+            "type": "string",
+            "description": "Version of the taxonomy used",
+            "isNullable": false
+          },
+          {
+            "name": "category_id",
+            "type": "string",
+            "description": "Identifier for the category in the taxonomy",
+            "isNullable": false
+          },
+          {
+            "name": "category_name",
+            "type": "string",
+            "description": "Name of the category",
+            "isNullable": false
+          },
+          {
+            "name": "category_path",
+            "type": "string",
+            "description": "Full path of the category in the taxonomy",
+            "isNullable": false
+          },
+          {
+            "name": "confidence_score",
+            "type": "decimal",
+            "description": "Confidence in the category mapping (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "mapping_timestamp",
+            "type": "timestamp",
+            "description": "When the category mapping was created",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.4",
+        "lastUpdated": "2025-05-13",
+        "provider": "Acxiom"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 10782.03,
+        "currency": "USD",
+        "billingFrequency": "realtime"
+      }
+    },
+    {
+      "id": "5ac44f2f-8783-457a-afe2-35155dcc26e6",
+      "name": "Location-Based_Audience_Data_7618",
+      "description": "Location-Based Audience Data dataset from Acxiom containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "767 TB",
+      "provider": "Acxiom",
+      "location": "s3://adtech-data-5953/dataset-924.parquet",
+      "locationType": "s3",
+      "credentials": {
+        "type": "s3",
+        "details": {
+          "accessKeyId": "AKIARWK7X66G",
+          "secretAccessKey": "so19xp48ko",
+          "region": "us-east-1",
+          "credentialType": "accessKey",
+          "bucket": "adtech-data-7297"
+        }
+      },
+      "updateFrequency": "monthly",
+      "lastUpdated": "2025-05-12T22:30:20.749Z",
+      "nextUpdate": "2025-06-11T22:30:20.749Z",
+      "status": "active",
+      "qualityScore": 84,
+      "metadata": {
+        "recordCount": 1308472,
+        "fileFormat": "parquet",
+        "compressionType": "snappy",
+        "dataOwner": "Acxiom",
+        "dataSource": "Acxiom POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "poi-data",
+          "acxiom",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "audience_id",
+            "type": "string",
+            "description": "Unique identifier for the location-based audience",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "audience_name",
+            "type": "string",
+            "description": "Name of the audience",
+            "isNullable": false
+          },
+          {
+            "name": "audience_description",
+            "type": "string",
+            "description": "Description of the audience",
+            "isNullable": true
+          },
+          {
+            "name": "location_type",
+            "type": "string",
+            "description": "Type of location (retail, restaurant, etc.)",
+            "isNullable": false
+          },
+          {
+            "name": "location_categories",
+            "type": "array",
+            "description": "Categories of locations",
+            "isNullable": false
+          },
+          {
+            "name": "visitation_frequency",
+            "type": "string",
+            "description": "Required visitation frequency",
+            "isNullable": false
+          },
+          {
+            "name": "recency_days",
+            "type": "integer",
+            "description": "Recency requirement in days",
+            "isNullable": false
+          },
+          {
+            "name": "dwell_time_minimum",
+            "type": "integer",
+            "description": "Minimum dwell time in seconds",
+            "isNullable": true
+          },
+          {
+            "name": "user_count",
+            "type": "integer",
+            "description": "Number of users in the audience",
+            "isNullable": false
+          },
+          {
+            "name": "creation_date",
+            "type": "date",
+            "description": "When the audience was created",
+            "isNullable": false
+          },
+          {
+            "name": "last_updated",
+            "type": "date",
+            "description": "When the audience was last updated",
+            "isNullable": false
+          },
+          {
+            "name": "audience_source",
+            "type": "string",
+            "description": "Source of the audience data",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.7",
+        "lastUpdated": "2025-05-13",
+        "provider": "Oracle Data Cloud"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 3677.4,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "c8b34dc7-ac76-4e3a-8037-340702d9b0ec",
+      "name": "Brand_Affinity_Data_1057",
+      "description": "Brand Affinity Data dataset from Oracle Data Cloud containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "CPG Transactions Data",
+      "size": "777 KB",
+      "provider": "Oracle Data Cloud",
+      "location": "project-1027.adtech_dataset.user_data_215",
+      "locationType": "bigquery",
+      "credentials": {
+        "type": "bigquery",
+        "details": {
+          "projectId": "project-2812",
+          "clientEmail": "service-account-404@project-7418.iam.gserviceaccount.com",
+          "privateKey": "-----BEGIN PRIVATE KEY-----\nMIIE...SAMPLE...KEY\n-----END PRIVATE KEY-----\n",
+          "dataset": "adtech_dataset"
+        }
+      },
+      "updateFrequency": "realtime",
+      "lastUpdated": "2025-05-01T22:30:20.749Z",
+      "nextUpdate": null,
+      "status": "active",
+      "qualityScore": 92,
+      "metadata": {
+        "recordCount": 3007849,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Oracle Data Cloud",
+        "dataSource": "Oracle Data Cloud CPG Transactions Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "cpg-transactions-data",
+          "oracle-data-cloud",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "user_id",
+            "type": "string",
+            "description": "Unique identifier for the user",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "brand_id",
+            "type": "string",
+            "description": "Identifier for the brand",
+            "isNullable": false
+          },
+          {
+            "name": "brand_name",
+            "type": "string",
+            "description": "Name of the brand",
+            "isNullable": false
+          },
+          {
+            "name": "brand_category",
+            "type": "string",
+            "description": "Category of the brand",
+            "isNullable": false
+          },
+          {
+            "name": "affinity_score",
+            "type": "decimal",
+            "description": "Strength of brand affinity (0-1)",
+            "isNullable": false
+          },
+          {
+            "name": "affinity_type",
+            "type": "string",
+            "description": "Type of affinity (e.g., 'owner', 'advocate', 'interested')",
+            "isNullable": false
+          },
+          {
+            "name": "engagement_count",
+            "type": "integer",
+            "description": "Number of engagements with the brand",
+            "isNullable": false
+          },
+          {
+            "name": "first_engagement",
+            "type": "timestamp",
+            "description": "When the user first engaged with the brand",
+            "isNullable": false
+          },
+          {
+            "name": "last_engagement",
+            "type": "timestamp",
+            "description": "When the user last engaged with the brand",
+            "isNullable": false
+          },
+          {
+            "name": "data_source",
+            "type": "string",
+            "description": "Source of the brand affinity data",
+            "isNullable": false
+          }
+        ],
+        "version": "1.0.6",
+        "lastUpdated": "2025-05-13",
+        "provider": "Neustar"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 5496.98,
+        "currency": "USD",
+        "billingFrequency": "daily"
+      }
+    },
+    {
+      "id": "67f76593-9252-4314-aa60-cc649248559f",
+      "name": "Point_of_Interest_(POI)_Data_5251",
+      "description": "Point of Interest (POI) Data dataset from Nielsen containing user identifiers and associated metadata for targeted advertising and analytics.",
+      "type": "POI Data",
+      "size": "626 KB",
+      "provider": "Nielsen",
+      "location": "SNOWFLAKE_DB.ADTECH_SCHEMA.USER_DATA_425",
+      "locationType": "snowflake",
+      "credentials": {
+        "type": "snowflake",
+        "details": {
+          "account": "g8fxcw1k",
+          "username": "adtech_user_162",
+          "password": "bdu7po0lcew",
+          "warehouse": "ADTECH_WH_3",
+          "database": "ADTECH_DB",
+          "schema": "ADTECH_SCHEMA"
+        }
+      },
+      "updateFrequency": "quarterly",
+      "lastUpdated": "2025-04-28T22:30:20.749Z",
+      "nextUpdate": "2025-05-28T22:30:20.749Z",
+      "status": "active",
+      "qualityScore": 88,
+      "metadata": {
+        "recordCount": 8418873,
+        "fileFormat": "csv",
+        "compressionType": "gzip",
+        "dataOwner": "Nielsen",
+        "dataSource": "Nielsen POI Data Platform",
+        "dataCategory": "PII",
+        "dataSensitivity": "high",
+        "retentionPeriod": "4 years",
+        "tags": [
+          "poi-data",
+          "nielsen",
+          "adtech",
+          "user-data"
+        ]
+      },
+      "schema": {
+        "columns": [
+          {
+            "name": "poi_id",
+            "type": "string",
+            "description": "Unique identifier for the POI",
+            "isNullable": false,
+            "isPrimaryKey": true
+          },
+          {
+            "name": "poi_name",
+            "type": "string",
+            "description": "Name of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "Primary category of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "subcategory",
+            "type": "string",
+            "description": "Subcategory of the POI",
+            "isNullable": true
+          },
+          {
+            "name": "latitude",
+            "type": "decimal",
+            "description": "Latitude of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "longitude",
+            "type": "decimal",
+            "description": "Longitude of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "address",
+            "type": "string",
+            "description": "Street address of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "city",
+            "type": "string",
+            "description": "City of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "state",
+            "type": "string",
+            "description": "State/province of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "country",
+            "type": "string",
+            "description": "Country of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "postal_code",
+            "type": "string",
+            "description": "Postal code of the POI",
+            "isNullable": false
+          },
+          {
+            "name": "phone",
+            "type": "string",
+            "description": "Phone number of the POI",
+            "isNullable": true
+          },
+          {
+            "name": "website",
+            "type": "string",
+            "description": "Website of the POI",
+            "isNullable": true
+          },
+          {
+            "name": "hours",
+            "type": "string",
+            "description": "Operating hours of the POI",
+            "isNullable": true
+          },
+          {
+            "name": "brand_id",
+            "type": "string",
+            "description": "Identifier for the brand of the POI",
+            "isNullable": true
+          }
+        ],
+        "version": "1.0.2",
+        "lastUpdated": "2025-05-13",
+        "provider": "Acxiom"
+      },
+      "pricing": {
+        "type": "subscription",
+        "amount": 6387.7,
+        "currency": "USD",
+        "billingFrequency": "monthly"
+      }
+    }
+  ]
+}
