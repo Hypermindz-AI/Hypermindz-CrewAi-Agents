@@ -1,0 +1,20 @@
+dataset_query_task:
+  description: >
+    Find the top 5 datasets that best match the user query: "{query}".
+    Only use the indexed metadata from the JSON dataset catalog.
+
+    Rank by:
+    1. Semantic match to the query
+    2. Dataset quality score
+
+    Return each with:
+    - ID
+    - Name
+    - Description
+    - Provider
+    - Tags
+    - Quality Score
+  expected_output: >
+    A markdown formatted list of top 5 datasets including the fields above.
+  agent: curator_agent
+
