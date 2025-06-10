@@ -17,7 +17,7 @@ class DatasetFinder():
         return Agent(
             config=self.agents_config['curator_agent'],
             tools=[hypermindz_rag_search],
-            llm=LLM(model="gpt-4o", temperature=0),
+            llm=LLM(model="gpt-4o-mini", temperature=0),
             verbose=True
         )
 
