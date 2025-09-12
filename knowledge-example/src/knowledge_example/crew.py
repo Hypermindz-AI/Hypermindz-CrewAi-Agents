@@ -19,7 +19,7 @@ class DatasetFinder():
         return Agent(
             config=self.agents_config['curator_agent'],
             knowledge_sources=[dataset_knowledge],
-            llm=LLM(model="gpt-4", temperature=0),
+            llm=LLM(model="gpt-4.1-mini", temperature=0),
             verbose=True
         )
 
